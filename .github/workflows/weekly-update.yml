@@ -43,7 +43,7 @@ jobs:
         run: |
           git config user.name "case-comp-updater"
           git config user.email "actions@users.noreply.github.com"
-          git add -A -- '*.js' ':!scripts/*' ':!node_modules'
+          git add -- data.js live.js updates.js
           if git diff --cached --quiet; then echo "No changes"; exit 0; fi
           git commit -m "Weekly update $(date +%F)" -m "$(tail -40 update-log.txt 2>/dev/null || echo 'Unstop open list refreshed')"
           git push
