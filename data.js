@@ -1,6 +1,6 @@
 /* The Fest Map data. Edited by hand and by the weekly updater (scripts/update.mjs). */
 window.FEST = {
- "checked": "2026-10-08",
+ "checked": "2026-11-05",
  "events": [
   {
    "n": "Shaastra",
@@ -274,11 +274,11 @@ window.FEST = {
    "n": "Techkriti",
    "inst": "IIT Kanpur",
    "it": "IIT",
-   "m": 3,
-   "d": "Usually March",
+   "m": 1,
+   "d": "Late January",
    "org": "Techkriti Core Team, IITK",
    "sub": "Pitch Premier, Beat the Market, Strategy Sprint, ML Hackathon (₹6L), Hack IITK (₹30L), Robowars, MUN, Rakshakriti",
-   "reg": "Mid-February",
+   "reg": "Open now (Nov 2026)",
    "cats": [
     "entrepreneurship",
     "finance",
@@ -288,8 +288,10 @@ window.FEST = {
    "star": true,
    "last": "Mar 19-22, 2026",
    "links": {
-    "site": "https://techkriti.org"
-   }
+    "site": "https://techkriti.org",
+    "unstop": "https://unstop.com/college-fests/techkriti27-indian-institute-of-technology-iit-kanpur-513311"
+   },
+   "start": "2027-01-28"
   },
   {
    "n": "Cognizance",
@@ -352,8 +354,8 @@ window.FEST = {
    "n": "Zeitgeist",
    "inst": "IIT Ropar",
    "it": "IIT",
-   "m": 10,
-   "d": "October (usual slot)",
+   "m": 3,
+   "d": "Mid-March",
    "org": "Cultural Council, IIT Ropar",
    "sub": "Cultural pro-nights + finance / marketing sub-events",
    "reg": "Early September",
@@ -365,7 +367,8 @@ window.FEST = {
    "links": {
     "site": "https://www.zeitgeist.org.in",
     "ig": "zeitgeist.iitrpr"
-   }
+   },
+   "last": "Mar 13-15, 2026"
   },
   {
    "n": "Tarang",
@@ -425,8 +428,8 @@ window.FEST = {
    "n": "Moksha",
    "inst": "NSUT, Delhi",
    "it": "Other",
-   "m": 3,
-   "d": "Usually March",
+   "m": 10,
+   "d": "Late October",
    "org": "NSUT Student Body",
    "sub": "NSUT's flagship cultural fest. The 2026 edition was postponed; Innovision is a separate NSUT tech fest held around Oct–Nov.",
    "reg": "Mid-February",
@@ -438,7 +441,9 @@ window.FEST = {
     "site": "https://mokshansut.com",
     "ig": "mokshansut"
    },
-   "status": "postponed"
+   "status": "postponed",
+   "last": "Oct 29-31, 2026",
+   "done": true
   },
   {
    "n": "Business Leadership Summit",
@@ -483,8 +488,8 @@ window.FEST = {
    "n": "Shri Ram Economics Summit",
    "inst": "SRCC, DU",
    "it": "DU",
-   "m": 4,
-   "d": "Usually April",
+   "m": 3,
+   "d": "March or April",
    "org": "The Economics Society, SRCC",
    "sub": "Shri Ram Case Conundrum, National Economics Olympiad",
    "reg": "Mid-March",
@@ -493,7 +498,7 @@ window.FEST = {
     "consulting"
    ],
    "star": false,
-   "last": "Apr 7-8, 2025",
+   "last": "Mar 16-17, 2026",
    "links": {
     "ig": "ecosoc.srcc",
     "unstop": "https://unstop.com/competitions/shri-ram-case-conundrum-shri-ram-economics-summit-2025-srcc-du-1636302"
@@ -862,7 +867,7 @@ window.FEST = {
    ],
    "prize": "Eureka! ₹2 Cr",
    "star": true,
-   "last": "Dec 2025",
+   "last": "Dec 11-12, 2025",
    "links": {
     "site": "https://www.ecell.in/esummit/",
     "ig": "iitbombay_ecell",
@@ -906,6 +911,44 @@ window.FEST = {
    "links": {
     "site": "https://conference.iima.ac.in/imrc2025/"
    }
+  },
+  {
+   "n": "Kshitij",
+   "inst": "IIT Kharagpur",
+   "it": "IIT",
+   "m": 1,
+   "d": "16-18 Jan 2026",
+   "org": "Students of IIT Kharagpur",
+   "sub": "Annual techno-management fest. Management contests alongside coding, design and tech events.",
+   "reg": "See official site for event registrations",
+   "cats": [
+    "management"
+   ],
+   "star": false,
+   "last": "Jan 2026",
+   "links": {
+    "web": "https://ktj.in"
+   },
+   "added": "2026-11-05",
+   "isNew": true
+  },
+  {
+   "n": "Pragyan",
+   "inst": "NIT Trichy",
+   "it": "NIT",
+   "m": 2,
+   "d": "19-22 Feb 2026",
+   "org": "Students of NIT Tiruchirappalli",
+   "sub": "Annual techno-managerial fest. Contests, hackathons, debates, workshops and industry sessions.",
+   "reg": "See official site for event registrations",
+   "cats": [
+    "management"
+   ],
+   "star": false,
+   "last": "Feb 2026",
+   "links": {},
+   "added": "2026-11-05",
+   "isNew": true
   }
  ],
  "handles": [
