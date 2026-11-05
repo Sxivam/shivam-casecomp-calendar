@@ -168,6 +168,7 @@ log(`   ${listings.length} open competitions`);
 let live = prevLive?.items || [];
 if (listings.length && !UNSTOP_ONLY) {
   log('2. Picking Unstop listings for this site');
+  try {
   const compact = listings.map((x) => ({ u: x.id, t: x.title, o: x.org, f: x.festival, ends: x.ends?.slice(0, 10) }));
   const names = entries.map((e) => ({ id: e[CFG.idKey], n: e[CFG.nameKey], o: e.org || e.inst || '' }));
   const pick = await ask(SYSTEM, `${CFG.livePrompt}
@@ -186,6 +187,10 @@ Return {"picks":[{"u":<unstop id>,"match":"<our entry id or null>","track":"<one
     return { ...x, match, track: String(p.track || '').slice(0, 24) };
   }).filter(Boolean).sort((a, b) => String(a.ends).localeCompare(String(b.ends)));
   log(`   kept ${live.length}`);
+  } catch (e) {
+    if (e.status === 401) { console.error('The Anthropic API key was rejected (401). Re-set the ANTHROPIC_API_KEY secret.'); process.exit(1); }
+    log(`   picking failed: ${e.message}`);
+  }
 } else if (listings.length && UNSTOP_ONLY) {
   const known = new Map((prevLive?.items || []).map((x) => [x.id, x]));
   live = listings.filter((x) => known.has(x.id)).map((x) => ({ ...known.get(x.id), ...x }));
