@@ -2,8 +2,7 @@ name: Self-update
 
 on:
   schedule:
-    - cron: "30 3 * * 1"     # Mondays 09:00 IST: full re-check with Claude + web search
-    - cron: "30 0 * * *"     # every day 06:00 IST: refresh the "open on Unstop" list only (free)
+    - cron: "30 0 * * *"     # daily 06:00 IST: Unstop refresh; a full Claude check when the last one is 10+ days old
   workflow_dispatch:
     inputs:
       mode:
@@ -35,7 +34,9 @@ jobs:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
           set -o pipefail
-          if [ "${{ github.event.schedule }}" = "30 0 * * *" ] || [ "${{ inputs.mode }}" = "unstop" ]; then
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            node scripts/update.mjs --auto | tee update-log.txt
+          elif [ "${{ inputs.mode }}" = "unstop" ]; then
             node scripts/update.mjs --unstop-only
           else
             node scripts/update.mjs | tee update-log.txt
@@ -46,5 +47,5 @@ jobs:
           git config user.email "actions@users.noreply.github.com"
           git add -- data.js live.js updates.js
           if git diff --cached --quiet; then echo "No changes"; exit 0; fi
-          git commit -m "Weekly update $(date +%F)" -m "$(tail -40 update-log.txt 2>/dev/null || echo 'Unstop open list refreshed')"
+          git commit -m "Auto update $(date +%F)" -m "$(tail -40 update-log.txt 2>/dev/null || echo 'Unstop open list refreshed')"
           git push

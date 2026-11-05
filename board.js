@@ -40,7 +40,7 @@
   // freshness stamp + changelog
   const U = window.UPDATES, last = U && U.runs && U.runs[0], st = $('#freshStamp');
   st.hidden = false;
-  st.textContent = last ? `✓ re-checked ${day(last.date)} · ${last.changes.length} ${last.changes.length === 1 ? 'change' : 'changes'}` : 'auto-checks every Monday';
+  st.textContent = last ? `✓ re-checked ${day(last.date)} · ${last.changes.length} ${last.changes.length === 1 ? 'change' : 'changes'}` : 'auto-checks every 10 days';
   const dlg = $('#logDlg');
   const lbl = { '(new entry)': 'Added to the map', m: 'Month', d: 'Usual timing', reg: 'Registrations open', last: 'Last edition', start: 'Next edition starts', status: 'Status', done: 'Finished this season', prize: 'Prize pool', sub: 'Flagship events', 'links.site': 'Official site', 'links.ig': 'Instagram', 'links.unstop': 'Unstop page' };
   st.addEventListener('click', () => {

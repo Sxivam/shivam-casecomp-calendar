@@ -23,9 +23,10 @@ import Anthropic from '@anthropic-ai/sdk';
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const CFG = JSON.parse(fs.readFileSync(path.join(ROOT, 'scripts/site.json'), 'utf8'));
 const DRY = process.argv.includes('--dry');
-const UNSTOP_ONLY = process.argv.includes('--unstop-only');
+let UNSTOP_ONLY = process.argv.includes('--unstop-only');
+const EVERY_DAYS = 10;
 const TODAY = new Date().toISOString().slice(0, 10);
-const MODEL = 'claude-opus-5-5';
+const MODEL = 'claude-haiku-5-5'; // cheapest model, lowest effort: keeps a full check to cents
 const log = (...a) => console.log(...a);
 
 /* ---------- data files: window.X = {...}; ---------- */
@@ -77,22 +78,21 @@ async function unstop() {
 }
 
 /* ---------- Claude ---------- */
-const client = UNSTOP_ONLY ? null : new Anthropic();
+let client = null;
 const TOOLS = [
-  { type: 'web_search_20260209', name: 'web_search', max_uses: CFG.searchesPerBatch || 8, user_location: { type: 'approximate', country: 'IN' } },
-  { type: 'web_fetch_20260209', name: 'web_fetch', max_uses: 6 },
+  { type: 'web_search_20250305', name: 'web_search', max_uses: CFG.searchesPerBatch || 3, user_location: { type: 'approximate', country: 'IN' } },
+  { type: 'web_fetch_20250910', name: 'web_fetch', max_uses: 2, max_content_tokens: 6000 },
 ];
 let spend = { input: 0, output: 0, searches: 0 };
 
 async function ask(system, prompt, useWeb = true) {
+  client ??= new Anthropic();
   const messages = [{ role: 'user', content: prompt }];
   for (let turn = 0; turn < 8; turn++) {
-    const stream = client.beta.messages.stream({
+    const stream = client.messages.stream({
       model: MODEL,
-      max_tokens: 32000,
-      betas: ['server-side-fallback-2026-07-01'],
-      fallbacks: 'default',
-      output_config: { effort: 'medium' },
+      max_tokens: 16000,
+      output_config: { effort: 'low' },
       system,
       tools: useWeb ? TOOLS : undefined,
       messages,
@@ -159,6 +159,12 @@ async function applyPatch(p) {
 /* ---------- run ---------- */
 const prevLive = readWin(CFG.liveFile, 'LIVE');
 const prevLog = readWin(CFG.logFile, 'UPDATES') || { runs: [] };
+// --auto (the daily schedule): a full check only when the last one is EVERY_DAYS or more old
+if (process.argv.includes('--auto')) {
+  const age = prevLog.last ? (Date.parse(TODAY) - Date.parse(prevLog.last)) / 864e5 : Infinity;
+  UNSTOP_ONLY = age < EVERY_DAYS || !process.env.ANTHROPIC_API_KEY;
+  log(UNSTOP_ONLY ? `Last full check ${prevLog.last || 'never'}; next one after ${EVERY_DAYS} days. Refreshing Unstop only.` : `Last full check ${prevLog.last || 'never'}: running a full check.`);
+}
 
 log(`\n${CFG.siteName}: ${entries.length} entries, ${TODAY}${DRY ? ' (dry run)' : ''}`);
 log('1. Unstop');
@@ -272,6 +278,6 @@ if (!UNSTOP_ONLY) {
   writeWin(CFG.logFile, 'UPDATES', prevLog, 'What the weekly updater changed, newest first.');
 }
 if (!UNSTOP_ONLY) {
-  const cost = spend.input / 1e6 * 4 + spend.output / 1e6 * 20 + spend.searches * 0.01;
+  const cost = spend.input / 1e6 * 0.10 + spend.output / 1e6 * 0.50 + spend.searches * 0.01;
   log(`\nTokens: ${spend.input} in, ${spend.output} out, ${spend.searches} searches, about $${cost.toFixed(2)}`);
 }
