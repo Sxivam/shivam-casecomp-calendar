@@ -1,0 +1,5 @@
+.vercel
+.admin-key.local
+.env.local
+node_modules
+.env*

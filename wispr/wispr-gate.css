@@ -1,0 +1,115 @@
+/* Wispr Gate kit: email gate + Wispr Flow Pro claim, with the Flow Bar, sounds and stickers from the Wispr Flow Creator Pack.
+   Restyle the gate card to the host site with these variables (set them on :root in the site's own CSS). */
+:root{
+  --wg-bg:#fff; --wg-ink:#111110; --wg-sub:#5d5a55; --wg-accent:#111110; --wg-accent-ink:#fff;
+  --wg-font:inherit; --wg-head:inherit; --wg-radius:0px; --wg-shadow:8px 8px 0 var(--wg-ink);
+  --wg-border:var(--wg-ink); --wg-field-bg:#fff; --wg-field-ink:#111;
+  /* Wispr's own palette (sampled from the pack's Flow Bar renders): keep these as they are */
+  --w-ink:#141210; --w-pill:#181818; --w-cream:#F8F8E8; --w-lilac:#ECDCFB; --w-sub:#bdb6c9; --w-ease:cubic-bezier(.2,1.25,.35,1);
+}
+
+/* ---------- the lock: a faded preview of the section, the gate card sits over its bottom edge ---------- */
+.wg-hidden{display:none!important}
+.wg-locked{max-height:460px;overflow:hidden;pointer-events:none;user-select:none;-webkit-mask-image:linear-gradient(#000 35%,transparent 92%);mask-image:linear-gradient(#000 35%,transparent 92%)}
+.wg-gate{position:relative;z-index:5;margin:-140px auto 48px;max-width:520px;padding:0 4px}
+.wg-gate[hidden]{display:none}
+.wg-card{position:relative;background:var(--wg-bg);color:var(--wg-ink);border:1px solid var(--wg-border);border-radius:var(--wg-radius);padding:28px;box-shadow:var(--wg-shadow);font-family:var(--wg-font);text-align:left}
+.wg-card h2{font-family:var(--wg-head);font-size:34px;line-height:1.05;margin:0 0 8px;color:var(--wg-ink)}
+.wg-card>p{margin:0 0 16px;color:var(--wg-sub);font-size:16px;line-height:1.5}
+.wg-perk{font-size:14.5px;margin:0 0 4px}
+.wg-wperk{display:flex;align-items:center;gap:10px;margin:10px 0 4px;background:var(--w-ink);color:#FFFCF6;padding:11px 14px;font-size:14.5px;line-height:1.35;border-radius:calc(var(--wg-radius) * .6)}
+.wg-wperk img{height:15px;flex:none}
+.wg-wperk b{color:var(--w-lilac)}
+.wg-card label{display:block;font-size:13px;font-weight:600;margin:12px 0 6px}
+.wg-card input{width:100%;box-sizing:border-box;height:48px;border:1px solid var(--wg-border);border-radius:calc(var(--wg-radius) * .6);padding:0 12px;font:16px var(--wg-font);background:var(--wg-field-bg);color:var(--wg-field-ink)}
+.wg-card input:focus{outline:2px solid var(--wg-accent);outline-offset:-1px}
+.wg-btn{position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;width:100%;height:52px;margin-top:18px;border:1px solid var(--wg-accent);border-radius:calc(var(--wg-radius) * .6);background:var(--wg-accent);color:var(--wg-accent-ink);font:600 16px var(--wg-font);cursor:pointer}
+.wg-btn:active{transform:translateY(1px)}
+.wg-btn .fbar{background:none;border:0;height:24px;width:auto;padding:0}
+.wg-btn .fbar i{background:var(--wg-accent-ink)}
+.wg-err{color:#b3261e;font-size:14px;margin:10px 0 0;min-height:1em}
+.wg-fine{font-size:12.5px;color:var(--wg-sub);margin:10px 0 0}
+
+/* ---------- the hero line, visible to everyone ---------- */
+.wg-offer{display:inline-flex;align-items:center;gap:10px;max-width:100%;margin:16px 0 0;background:var(--w-ink);color:#FFFCF6;padding:10px 14px;text-decoration:none;font:500 14.5px/1.3 var(--wg-font);border-radius:calc(var(--wg-radius) * .6)}
+.wg-offer img{height:15px;display:block;flex:none}
+.wg-offer b{color:var(--w-lilac)}
+.wg-offer:hover{background:#000}
+
+/* ---------- Flow Bar: the pill from the pack's "Flow Bar Animation" ---------- */
+.fbar{--bw:6px;--gap:7px;display:flex;align-items:center;justify-content:center;gap:var(--gap);background:var(--w-pill);border:5px solid var(--w-cream);border-radius:999px;height:92px;width:300px;max-width:100%;box-sizing:border-box}
+.fbar i{display:block;flex:none;width:var(--bw);height:var(--bw);border-radius:var(--bw);background:var(--w-cream);opacity:.55;transition:opacity .25s}
+.fbar.live i{opacity:1}
+.fbar.sm{--bw:3px;--gap:3px;height:26px;width:auto;padding:0 10px;border-width:2px}
+
+/* ---------- dock: the Wispr bar parked bottom-centre after signup ---------- */
+.wg-dock{position:fixed;left:50%;bottom:calc(16px + env(safe-area-inset-bottom));z-index:30;display:flex;align-items:center;gap:10px;transform:translate(-50%,160%);background:var(--w-pill);color:var(--w-cream);border:2px solid var(--w-cream);border-radius:999px;padding:6px 6px 6px 8px;box-shadow:0 14px 40px rgba(0,0,0,.28);transition:transform .6s var(--w-ease);font:600 14px Figtree,system-ui,sans-serif;max-width:calc(100vw - 24px);box-sizing:border-box}
+.wg-dock.in{transform:translate(-50%,0)}
+.wg-dock .fbar{border:0;background:none;padding:0 2px}
+.wg-dock a{display:flex;align-items:center;gap:8px;color:inherit;text-decoration:none;white-space:nowrap}
+.wg-dock a b{background:var(--w-lilac);color:var(--w-ink);border-radius:999px;padding:8px 13px;font-weight:700}
+.wg-dock a span:not(.fbar){overflow:hidden;text-overflow:ellipsis}
+.wg-dock button{background:none;border:0;color:var(--w-sub);font-size:20px;line-height:1;padding:0 6px 0 2px;cursor:pointer}
+
+/* ---------- the welcome pop-up ---------- */
+.wg-pop{position:fixed;inset:0;z-index:1000;display:none;align-items:center;justify-content:center;padding:16px;background:rgba(14,12,10,0);transition:background .4s,backdrop-filter .4s}
+.wg-pop.show{display:flex}
+.wg-pop.vis{background:rgba(14,12,10,.62);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px)}
+.wg-pcard{position:relative;box-sizing:border-box;width:100%;max-width:500px;max-height:calc(100vh - 32px);overflow:auto;background:var(--w-ink);color:#FFFCF6;padding:28px 26px 24px;border-radius:24px;font-family:Figtree,system-ui,sans-serif;text-align:left;
+  box-shadow:0 30px 80px rgba(0,0,0,.45);opacity:0;transform:translateY(40px) scale(.94);transition:opacity .35s,transform .7s var(--w-ease)}
+.wg-pop.vis .wg-pcard{opacity:1;transform:none}
+.wg-pop.out .wg-pcard{opacity:0;transform:translateY(24px) scale(.97);transition:opacity .25s,transform .3s ease-in}
+.wg-pcard:before{content:"";position:absolute;inset:-40% -20% auto;height:120%;background:radial-gradient(closest-side,rgba(236,220,251,.26),transparent 70%);animation:wg-breathe 4s ease-in-out infinite;pointer-events:none}
+.wg-top{position:relative;display:flex;align-items:center;justify-content:space-between}
+.wg-top img{height:22px}
+.wg-x{background:none;border:0;color:var(--w-sub);font-size:26px;line-height:1;cursor:pointer;padding:4px}
+.wg-stage{position:relative;display:flex;justify-content:center;margin:22px 0 14px}
+.wg-psticker{position:absolute;right:-24px;top:-30px;width:96px;transform:scale(0);pointer-events:none;filter:drop-shadow(0 8px 14px rgba(0,0,0,.35))}
+.wg-psticker.on{animation:wg-stick2 .75s var(--w-ease) forwards}
+@keyframes wg-stick2{0%{transform:rotate(-20deg) scale(0)}60%{transform:rotate(12deg) scale(1.1)}100%{transform:rotate(7deg) scale(1)}}
+.wg-pill{position:relative;margin:0 auto 14px;display:flex;align-items:center;gap:8px;width:max-content;font-size:13px;color:#cfc6dc;border:1px solid #3a3440;border-radius:99px;padding:5px 12px;transition:border-color .3s,color .3s}
+.wg-pill b{width:8px;height:8px;border-radius:50%;background:#F26B1D;animation:wg-blink 1s infinite}
+.wg-pill.done{border-color:#4a6b55;color:#d9f5e1}
+.wg-pill.done b{background:#7ee3a0;animation:none}
+.wg-say{position:relative;font-family:"EB Garamond",Georgia,serif;font-weight:500;font-size:40px;line-height:1.08;text-align:center;min-height:2.2em;margin:0 0 16px;letter-spacing:-.01em;color:#FFFCF6}
+.wg-say span{display:inline-block;opacity:0;transform:translateY(10px);filter:blur(6px);transition:opacity .3s ease-out,transform .4s var(--w-ease),filter .3s ease-out}
+.wg-say span.on{opacity:1;transform:none;filter:none}
+.wg-list{position:relative;list-style:none;padding:0;margin:0 0 16px}
+.wg-list li{display:flex;gap:10px;align-items:flex-start;font-size:16px;padding:10px 0;border-top:1px solid #2c2730;opacity:0;transform:translateX(-12px);transition:opacity .35s,transform .5s var(--w-ease)}
+.wg-list li.on{opacity:1;transform:none}
+.wg-list li:before{content:"✓";flex:none;width:22px;height:22px;border-radius:50%;background:var(--w-lilac);color:var(--w-ink);font-size:13px;font-weight:700;display:grid;place-items:center;margin-top:1px;transform:scale(0);transition:transform .45s var(--w-ease) .1s}
+.wg-list li.on:before{transform:scale(1)}
+.wg-note{position:relative;font-size:14.5px;color:var(--w-sub);margin:0 0 18px;opacity:0;transition:opacity .4s}
+.wg-cta{position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;gap:10px;width:100%;height:58px;border-radius:16px;background:var(--w-lilac);color:var(--w-ink);
+  font:700 17px Figtree,system-ui,sans-serif;text-decoration:none;opacity:0;transform:scale(.92);transition:opacity .35s,transform .55s var(--w-ease),background .2s}
+.wg-cta.on{opacity:1;transform:none;animation:wg-glow 2.4s ease-in-out 1.2s infinite}
+.wg-cta:after{content:"";position:absolute;top:0;bottom:0;left:-40%;width:30%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.75),transparent);transform:skewX(-18deg)}
+.wg-cta.on:after{animation:wg-sheen 3.2s ease-in-out .5s infinite}
+.wg-cta:hover{background:#fff}
+.wg-code{position:relative;display:flex;align-items:center;justify-content:center;gap:10px;margin:14px 0 4px;font-size:13.5px;color:var(--w-sub);opacity:0;transition:opacity .4s}
+.wg-code code{font:600 14px ui-monospace,Menlo,monospace;color:#FFFCF6;letter-spacing:.04em;background:none}
+.wg-code button{background:none;border:1px solid #3a3440;color:#FFFCF6;border-radius:8px;font:600 12.5px Figtree,system-ui,sans-serif;padding:5px 10px;cursor:pointer;transition:background .2s,color .2s,transform .3s var(--w-ease)}
+.wg-code button.ok{background:#7ee3a0;border-color:#7ee3a0;color:var(--w-ink);transform:scale(1.06)}
+.wg-skip{position:relative;display:block;margin:12px auto 0;background:none;border:0;color:var(--w-sub);font:500 14px Figtree,system-ui,sans-serif;text-decoration:underline;cursor:pointer}
+.wg-note.on,.wg-code.on{opacity:1}
+@keyframes wg-blink{50%{opacity:.25}}
+@keyframes wg-breathe{50%{opacity:.55;transform:scale(1.08)}}
+@keyframes wg-glow{0%,100%{box-shadow:0 0 0 0 rgba(236,220,251,0)}50%{box-shadow:0 0 0 8px rgba(236,220,251,.18)}}
+@keyframes wg-sheen{0%{left:-40%}45%,100%{left:130%}}
+
+@media (max-width:520px){
+  .wg-gate{margin-top:-100px}
+  .wg-card{padding:22px}
+  .wg-card h2{font-size:30px}
+  .wg-say{font-size:34px}
+  .wg-psticker{width:70px;right:-12px;top:auto;bottom:-40px}
+  .wg-stage .fbar:not(.sm){width:250px;height:80px}
+}
+@media (max-width:600px){.wg-gate{padding:0 16px}}
+@media (max-width:420px){.wg-dock a span:not(.fbar){display:none}}
+/* reduced motion: no card rise or sticker spin; the small Flow Bar still talks */
+@media (prefers-reduced-motion:reduce){
+  .wg-pcard:before,.wg-cta.on,.wg-cta.on:after,.wg-psticker.on{animation:none!important}
+  .wg-psticker.on{transform:rotate(8deg)}
+  .wg-pcard,.wg-say span,.wg-list li,.wg-cta,.wg-dock{transition:none}
+}

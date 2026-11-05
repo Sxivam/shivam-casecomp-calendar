@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Patrick+Hand&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/styles.css?v=2">
+<link rel="stylesheet" href="/styles.css?v=3">
 </head>
 <body>
 <div class="ink-progress" id="progress"></div>
@@ -230,5 +230,35 @@
 
 <script src="/data.js?v=2"></script>
 <script src="/app.js?v=2"></script>
+
+<!-- Wispr Gate (email gate + Wispr Flow Pro claim), from ~/Downloads/wispr-gate-kit.
+     The calendar shows its first cards then fades; routes, timing and handles stay hidden until signup. -->
+<link rel="stylesheet" href="/wispr/wispr-gate.css?v=5">
+<style>
+  :root{--wg-bg:#fff;--wg-ink:var(--ink);--wg-sub:var(--faint);--wg-accent:var(--blue);--wg-accent-ink:#fff;--wg-border:var(--ink);
+    --wg-field-bg:var(--paper);--wg-field-ink:var(--ink);--wg-head:'Kalam',cursive;--wg-font:'Patrick Hand',cursive;--wg-radius:14px;--wg-shadow:6px 6px 0 var(--ink)}
+  .wg-card{border:2px solid var(--ink)!important;border-radius:var(--wobblySm)!important}
+  .wg-card h2{font-weight:700;font-size:34px;line-height:1.05}
+  .wg-card input{border:2px solid var(--ink)!important;border-radius:var(--wobblySm)!important;font-size:19px}
+  .wg-btn{border-radius:var(--wobblySm)!important;font-family:'Kalam',cursive!important;font-size:20px!important;box-shadow:4px 4px 0 var(--ink)}
+  .wg-offer{border-radius:var(--wobblySm);font-family:'Patrick Hand',cursive;font-size:17px;transform:rotate(-1deg)}
+  #calendar.wg-locked{-webkit-mask-image:linear-gradient(#000 55%,transparent 96%);mask-image:linear-gradient(#000 55%,transparent 96%)}
+</style>
+<script>
+window.WISPR_GATE = {
+  lock: "#calendar, #tracks, #leadtime, #handles",
+  peek: "#cards",
+  peekExtra: 520,
+  offerAt: ".hero-cta",
+  title: "Unlock the whole circuit",
+  lede: "Free. Drop your name and email to open all 47 fests with dates, prize pools and checked links, and claim Wispr Flow Pro for 3 months FREE.",
+  perks: ["All 47 fests, month by month, with the alert window for each", "Route maps per track, the lead-time ruler and 24 Instagram handles to follow"],
+  button: "Unlock the calendar for FREE",
+  welcome: ["All 47 fests on the circuit, unlocked"],
+  note: "Talk your case notes and deck outlines into Wispr Flow between rounds. It works in every app.",
+  skip: "Open the calendar",
+};
+</script>
+<script src="/wispr/wispr-gate.js?v=5" defer></script>
 </body>
 </html>
