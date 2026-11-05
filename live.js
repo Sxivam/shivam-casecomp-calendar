@@ -4,15 +4,26 @@ window.LIVE = {
  "source": "unstop.com",
  "items": [
   {
-   "id": 1770859,
-   "title": "When Lean Has No Slack: Axiom & Next Operations Case Challenge 2026",
-   "org": "Xavier School of Management (XLRI), Delhi",
+   "id": 1773651,
+   "title": "Finquest 8.0",
+   "org": "Indian Institute of Management (IIM), Nagpur",
    "festival": "",
-   "ends": "2026-11-06T12:59:00+05:30",
-   "url": "https://unstop.com/competitions/when-lean-has-no-slack-axiom-next-operations-case-challenge-2026-nova-exilaro26-xlri-delhi-1770859",
+   "ends": "2026-11-05T23:59:49+05:30",
+   "url": "https://unstop.com/competitions/finquest-80-tangerine-trails-indian-institute-of-management-iim-nagpur-1773651",
    "region": "online",
    "match": null,
-   "track": "Ops"
+   "track": "Finance"
+  },
+  {
+   "id": 1774254,
+   "title": "ProdCraft",
+   "org": "Indian Institute of Management (IIM), Udaipur",
+   "festival": "",
+   "ends": "2026-11-06T00:00:00+05:30",
+   "url": "https://unstop.com/competitions/prodcraft-solaris-2026--1774254",
+   "region": "online",
+   "match": null,
+   "track": "Product"
   },
   {
    "id": 1774039,
@@ -26,103 +37,59 @@ window.LIVE = {
    "track": "Finance"
   },
   {
-   "id": 1789949,
-   "title": "Global Case Masters 2026",
-   "org": "Institute of Management Technology (IMT), Ghaziabad",
+   "id": 1774366,
+   "title": "Capital Quest",
+   "org": "Indian Institute of Management (IIM), Udaipur",
    "festival": "",
-   "ends": "2026-11-08T23:59:00+05:30",
-   "url": "https://unstop.com/competitions/global-case-masters-2026-imt-ghaziabad-1789949",
-   "region": "online",
-   "match": null,
-   "track": "General"
-  },
-  {
-   "id": 1746050,
-   "title": "Circus Maximus - Marketing Flagship Event - 2026",
-   "org": "Xavier School of Management (XLRI)",
-   "festival": "",
-   "ends": "2026-11-08T23:59:06+05:30",
-   "url": "https://unstop.com/competitions/circus-maximus-marketing-flagship-event-2026-ensemble-valhalla-2026-xavier-school-of-management-xlri-1746050",
-   "region": "online",
-   "match": null,
-   "track": "Marketing"
-  },
-  {
-   "id": 1745936,
-   "title": "Societas - Sustainability Flagship Event 2026",
-   "org": "Xavier School of Management (XLRI)",
-   "festival": "",
-   "ends": "2026-11-08T23:59:10+05:30",
-   "url": "https://unstop.com/competitions/societas-sustainability-flagship-event-2026-ensemble-valhalla-2026-xavier-school-of-management-xlri-1745936",
-   "region": "online",
-   "match": null,
-   "track": "Sustainability"
-  },
-  {
-   "id": 1774919,
-   "title": "DataZoids 5.0 - A Pan India Analytics Case Study Challenge",
-   "org": "Indian Institute of Management (IIM), Kashipur",
-   "festival": "",
-   "ends": "2026-11-08T23:59:10+05:30",
-   "url": "https://unstop.com/competitions/datazoids-50-a-pan-india-analytics-case-study-challenge-iim-kashipur-1774919",
-   "region": "online",
-   "match": null,
-   "track": "Analytics"
-  },
-  {
-   "id": 1746068,
-   "title": "War of Wits - HR Flagship Event 2026",
-   "org": "Xavier School of Management (XLRI)",
-   "festival": "",
-   "ends": "2026-11-08T23:59:17+05:30",
-   "url": "https://unstop.com/competitions/war-of-wits-hr-flagship-event-2026-ensemble-valhalla-2026-xavier-school-of-management-xlri-1746068",
-   "region": "online",
-   "match": null,
-   "track": "HR"
-  },
-  {
-   "id": 1745663,
-   "title": "Strategikon - Consulting Flagship Event 2026",
-   "org": "Xavier School of Management (XLRI)",
-   "festival": "",
-   "ends": "2026-11-08T23:59:21+05:30",
-   "url": "https://unstop.com/competitions/strategikon-consulting-flagship-event-2026-ensemble-valhalla-2026-xavier-school-of-management-xlri-1745663",
-   "region": "online",
-   "match": null,
-   "track": "Strategy"
-  },
-  {
-   "id": 1745963,
-   "title": "Helios: Flagship Operations Event-2026",
-   "org": "Xavier School of Management (XLRI)",
-   "festival": "",
-   "ends": "2026-11-08T23:59:42+05:30",
-   "url": "https://unstop.com/competitions/helios-flagship-operations-event-2026-ensemble-valhalla-2026-xavier-school-of-management-xlri-1745963",
-   "region": "online",
-   "match": null,
-   "track": "Ops"
-  },
-  {
-   "id": 1746063,
-   "title": "Genesis - Flagship Finance Event- 2026",
-   "org": "Xavier School of Management (XLRI)",
-   "festival": "",
-   "ends": "2026-11-08T23:59:50+05:30",
-   "url": "https://unstop.com/competitions/genesis-flagship-finance-event-2026-ensemble-valhalla-2026-xavier-school-of-management-xlri-1746063",
+   "ends": "2026-11-07T00:00:00+05:30",
+   "url": "https://unstop.com/competitions/capital-quest-solaris-2026--1774366",
    "region": "online",
    "match": null,
    "track": "Finance"
   },
   {
-   "id": 1779001,
-   "title": "Synergy '26: Orion Case Study Competition",
-   "org": "Xavier School of Management (XLRI), Jamshedpur",
+   "id": 1787492,
+   "title": "Prabhav 7.0",
+   "org": "Indian Institute of Management (IIM), Nagpur",
    "festival": "",
-   "ends": "2026-11-10T11:59:00+05:30",
-   "url": "https://unstop.com/competitions/synergy-26-orion-case-study-competition-xavier-school-of-management-xlri-jamshedpur-1779001",
+   "ends": "2026-11-07T23:59:00+05:30",
+   "url": "https://unstop.com/competitions/prabhav-70-indian-institute-of-management-iim-nagpur-1787492",
    "region": "online",
    "match": null,
    "track": "General"
+  },
+  {
+   "id": 1773188,
+   "title": "Ad-Vantage",
+   "org": "Indian Institute of Management (IIM), Kashipur",
+   "festival": "",
+   "ends": "2026-11-08T22:30:00+05:30",
+   "url": "https://unstop.com/competitions/ad-vantage-iim-kashipur-1773188",
+   "region": "online",
+   "match": null,
+   "track": "Marketing"
+  },
+  {
+   "id": 1776218,
+   "title": "Founder Of The Year 6.0 - Annual Flagship Case Competition",
+   "org": "Sri Guru Tegh Bahadur Khalsa College (SGTB Khalsa), University of Delhi (DU), New Delhi",
+   "festival": "",
+   "ends": "2026-11-08T23:59:00+05:30",
+   "url": "https://unstop.com/competitions/founder-of-the-year-60-annual-flagship-case-competition-sri-guru-tegh-bahadur-khalsa-college-sgtb-khalsa-du-1776218",
+   "region": "hybrid",
+   "match": null,
+   "track": "General"
+  },
+  {
+   "id": 1787004,
+   "title": "PetKids Paws and Grow Business Case Competition",
+   "org": "Indian Institute of Management (IIM), Ranchi",
+   "festival": "",
+   "ends": "2026-11-10T00:00:00+05:30",
+   "url": "https://unstop.com/competitions/petkids-paws-and-grow-business-case-competition-indian-institute-of-management-iim-ranchi-1787004",
+   "region": "online",
+   "match": null,
+   "track": "Marketing"
   },
   {
    "id": 1769878,
@@ -136,6 +103,28 @@ window.LIVE = {
    "track": "Marketing"
   },
   {
+   "id": 1791164,
+   "title": "FMA Gargi X FIC DDUC Finance Case Competition",
+   "org": "Finance Management Association, Gargi and Finance and Investment Cell, DDUC",
+   "festival": "",
+   "ends": "2026-11-10T23:59:00+05:30",
+   "url": "https://unstop.com/competitions/fma-gargi-x-fic-dduc-finance-case-competition-finance-management-association-gargi-and-finance-and-investme-1791164",
+   "region": "hybrid",
+   "match": null,
+   "track": "Finance"
+  },
+  {
+   "id": 1786648,
+   "title": "Finvestors 6.0 - Stock Analysis Challenge",
+   "org": "Indian Institute of Management (IIM), Visakhapatnam",
+   "festival": "",
+   "ends": "2026-11-10T23:59:00+05:30",
+   "url": "https://unstop.com/competitions/finvestors-60-stock-analysis-challenge--1786648",
+   "region": "online",
+   "match": null,
+   "track": "Finance"
+  },
+  {
    "id": 1794745,
    "title": "Consultimate 6.0",
    "org": "Indian Institute of Management (IIM), Visakhapatnam",
@@ -147,26 +136,15 @@ window.LIVE = {
    "track": "Strategy"
   },
   {
-   "id": 1773522,
-   "title": "Follow The Money: Innovation Challenge Powered by PayU",
-   "org": "Indian Institute of Management (IIM), Bangalore",
+   "id": 1792658,
+   "title": "NEXORA-The Case Competition",
+   "org": "Ram Lal Anand College, University of Delhi",
    "festival": "",
-   "ends": "2026-11-12T23:59:00+05:30",
-   "url": "https://unstop.com/competitions/follow-the-money-innovation-challenge-iim-bangalore-1773522",
-   "region": "hybrid",
+   "ends": "2026-11-11T00:00:00+05:30",
+   "url": "https://unstop.com/competitions/nexor-the-case-competition-ram-lal-anand-college-university-of-delhi-1792658",
+   "region": "offline",
    "match": null,
-   "track": "Finance"
-  },
-  {
-   "id": 1771235,
-   "title": "Chain Reaction '26",
-   "org": "Indian Institute of Management (IIM), Indore",
-   "festival": "",
-   "ends": "2026-11-13T00:00:00+05:30",
-   "url": "https://unstop.com/competitions/chain-reaction-26-iim-indore-1771235",
-   "region": "online",
-   "match": null,
-   "track": "Ops"
+   "track": "General"
   },
   {
    "id": 1792020,
@@ -188,18 +166,18 @@ window.LIVE = {
    "url": "https://unstop.com/competitions/mantravat-the-flagship-case-competition-solaris-2026--1775042",
    "region": "online",
    "match": null,
-   "track": "Strategy"
+   "track": "General"
   },
   {
-   "id": 1764443,
-   "title": "Techkriti Innovation Challenge | TECHKRITI | IIT KANPUR",
-   "org": "Techkriti",
+   "id": 1773216,
+   "title": "ECOGEN: National Sustainability Case Competition, 2026",
+   "org": "Institute of Management Technology (IMT), Nagpur",
    "festival": "",
-   "ends": "2026-11-14T13:12:20+05:30",
-   "url": "https://unstop.com/competitions/techkriti-innovation-challenge-techkriti27-techkriti-1764443",
-   "region": "offline",
-   "match": "Techkriti",
-   "track": "General"
+   "ends": "2026-11-15T23:59:00+05:30",
+   "url": "https://unstop.com/competitions/ecogen-national-sustainability-case-competition-2026-institute-of-management-technology-imt-nagpur-1773216",
+   "region": "hybrid",
+   "match": null,
+   "track": "Sustainability"
   },
   {
    "id": 1792085,
@@ -213,17 +191,6 @@ window.LIVE = {
    "track": "Ops"
   },
   {
-   "id": 1792089,
-   "title": "Avartan D-Street - Finance Case Challenge",
-   "org": "Indian Institute of Management (IIM), Mumbai",
-   "festival": "",
-   "ends": "2026-11-17T12:00:00+05:30",
-   "url": "https://unstop.com/competitions/avartan-d-street-finance-case-challenge-avartan-2026-iim-mumbai-1792089",
-   "region": "offline",
-   "match": null,
-   "track": "Finance"
-  },
-  {
    "id": 1792079,
    "title": "Avartan Bazaar - Marketing Case Challenge",
    "org": "Indian Institute of Management (IIM), Mumbai",
@@ -235,15 +202,26 @@ window.LIVE = {
    "track": "Marketing"
   },
   {
-   "id": 1786399,
-   "title": "Prod-a-Vista",
-   "org": "Indian Institute of Management (IIM), Raipur",
+   "id": 1771607,
+   "title": "Caseception (Case Competition)",
+   "org": "Symbiosis Center for Information Technology (SCIT), Pune",
    "festival": "",
-   "ends": "2026-11-25T23:59:00+05:30",
-   "url": "https://unstop.com/competitions/prod-a-vista--1786399",
+   "ends": "2026-11-19T23:59:00+05:30",
+   "url": "https://unstop.com/competitions/caseception-case-competition-integrity-ethics-conclave-11th-edition-2026-audacia-the-courage-to-begin-symbi-1771607",
    "region": "online",
    "match": null,
-   "track": "Product"
+   "track": "General"
+  },
+  {
+   "id": 1791989,
+   "title": "Episteme - Operations Case Competition",
+   "org": "Institute of Management Technology (IMT), Hyderabad",
+   "festival": "",
+   "ends": "2026-11-22T18:29:43+05:30",
+   "url": "https://unstop.com/competitions/episteme-operations-case-competition-impelz-120-institute-of-management-technology-imt-hyderabad-1791989",
+   "region": "hybrid",
+   "match": null,
+   "track": "Ops"
   },
   {
    "id": 1746033,
@@ -266,6 +244,28 @@ window.LIVE = {
    "region": "offline",
    "match": null,
    "track": "Marketing"
+  },
+  {
+   "id": 1773066,
+   "title": "Case Conclave",
+   "org": "Narsee Monjee College of Commerce and Economics, Mumbai",
+   "festival": "",
+   "ends": "2026-12-10T12:30:28+05:30",
+   "url": "https://unstop.com/competitions/case-conclave-arithmos-80-the-management-and-strategy-festival-narsee-monjee-college-of-commerce-and-econom-1773066",
+   "region": "online",
+   "match": null,
+   "track": "General"
+  },
+  {
+   "id": 1790448,
+   "title": "CHAKRAVYUH - The Flagship Business Event Of Xaviesta 5.0",
+   "org": "Xavier Business School (XBS), St. Xavier's University, Kolkata",
+   "festival": "",
+   "ends": "2026-12-18T23:59:00+05:30",
+   "url": "https://unstop.com/competitions/chakravyuh-the-flagship-business-event-of-xaviesta-50-xaviesta-50-kaalchakra-xavier-business-school-xbs-st--1790448",
+   "region": "hybrid",
+   "match": null,
+   "track": "General"
   }
  ]
 };
