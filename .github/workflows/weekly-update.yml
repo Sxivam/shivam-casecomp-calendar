@@ -1,0 +1,49 @@
+name: Self-update
+
+on:
+  schedule:
+    - cron: "30 3 * * 1"     # Mondays 09:00 IST: full re-check with Claude + web search
+    - cron: "30 0 * * *"     # every day 06:00 IST: refresh the "open on Unstop" list only (free)
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "full = Claude re-check, unstop = open list only"
+        default: full
+        type: choice
+        options: [full, unstop]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: self-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci --omit=dev || npm install --no-audit --no-fund
+      - name: Run the updater
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          if [ "${{ github.event.schedule }}" = "30 0 * * *" ] || [ "${{ inputs.mode }}" = "unstop" ]; then
+            node scripts/update.mjs --unstop-only
+          else
+            node scripts/update.mjs | tee update-log.txt
+          fi
+      - name: Commit changes
+        run: |
+          git config user.name "case-comp-updater"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A -- '*.js' ':!scripts/*' ':!node_modules'
+          if git diff --cached --quiet; then echo "No changes"; exit 0; fi
+          git commit -m "Weekly update $(date +%F)" -m "$(tail -40 update-log.txt 2>/dev/null || echo 'Unstop open list refreshed')"
+          git push

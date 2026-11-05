@@ -1,0 +1,89 @@
+{
+  "siteName": "The Fest Map",
+  "siteAbout": "a free calendar of India's B-school and college fests (IIM, IIT, XLRI, DU and more) whose case competitions and management events students should plan for, organised by month.",
+  "season": "2026-27",
+  "dataFile": "data.js",
+  "dataVar": "FEST",
+  "dataHeader": "The Fest Map data. Edited by hand and by the weekly updater (scripts/update.mjs).",
+  "listKey": "events",
+  "idKey": "n",
+  "nameKey": "n",
+  "checkedKey": "checked",
+  "liveFile": "live.js",
+  "logFile": "updates.js",
+  "batchSize": 12,
+  "searchesPerBatch": 10,
+  "contextKeys": [
+    "inst",
+    "m",
+    "d",
+    "reg",
+    "last",
+    "start",
+    "status",
+    "done",
+    "prize",
+    "links"
+  ],
+  "fields": {
+    "m": "month",
+    "d": "text",
+    "reg": "text",
+    "last": "text",
+    "start": "text",
+    "status": "text",
+    "done": "bool",
+    "prize": "text",
+    "sub": "text",
+    "links.site": "url",
+    "links.ig": "url",
+    "links.unstop": "url"
+  },
+  "fieldDocs": {
+    "m": "number 1-12, the month the fest usually happens",
+    "d": "short text, usual timing, e.g. 'Late Feb – early Mar'",
+    "reg": "short text, when registrations usually open",
+    "last": "dates of the most recent edition that has happened, e.g. 'Feb 27 - Mar 1, 2026'",
+    "start": "ISO date YYYY-MM-DD of the next edition's first day, only if officially announced",
+    "status": "'postponed' or 'cancelled' only when officially said; otherwise leave out",
+    "done": "true once this season's edition has finished",
+    "prize": "short text, headline prize pool if published",
+    "sub": "flagship events, one line; only change if facts are now wrong",
+    "links.site": "official fest website",
+    "links.ig": "official Instagram URL",
+    "links.unstop": "Unstop page for the fest or its flagship case competition"
+  },
+  "unstopTerms": [
+    "case competition",
+    "case study competition",
+    "b-plan",
+    "management fest",
+    "business quiz",
+    "consulting challenge"
+  ],
+  "liveMax": 24,
+  "livePrompt": "This site lists college and B-school FESTS (IIM, IIT, XLRI, MDI, FMS, SRCC, DU colleges and similar) and their case competitions. Pick the open Unstop listings that are case competitions or management events at these fests or similar reputed colleges. Match a listing to our entry when it belongs to that fest (same institute and fest).",
+  "addPrompt": "Find reputed Indian college or B-school fests with case competitions or management events that are missing from our list (for example a major IIM, IIT, NIT or top DU/Mumbai college fest), with a 2025 or 2026 edition.",
+  "addMax": 4,
+  "addTemplate": {
+    "n": "",
+    "inst": "",
+    "it": "Other",
+    "m": 1,
+    "d": "",
+    "org": "",
+    "sub": "",
+    "reg": "",
+    "cats": [
+      "management"
+    ],
+    "star": false,
+    "last": "",
+    "links": {}
+  },
+  "liveFallback": {
+    "include": "indian institute of management|indian institute of technology|\\(iim\\)|\\(iit\\)|xlri|university of delhi|shri ram|fms|mdi|spjimr|nmims|iift|management development institute",
+    "exclude": "",
+    "titleMust": "case|challenge|b-plan|business|strategy|marketing|consult|finance|product"
+  }
+}

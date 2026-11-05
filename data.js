@@ -1,4 +1,4 @@
-/* The Fest Map data. Links re-checked 2026-10-08 (official site = HTTP 200 that day). */
+/* The Fest Map data. Edited by hand and by the weekly updater (scripts/update.mjs). */
 window.FEST = {
  "checked": "2026-10-08",
  "events": [

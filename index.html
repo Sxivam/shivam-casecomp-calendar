@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Patrick+Hand&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/styles.css?v=3">
+<link rel="stylesheet" href="/styles.css?v=4">
 </head>
 <body>
 <div class="ink-progress" id="progress"></div>
@@ -39,7 +39,7 @@
 <header id="top">
   <div class="wrap hero-grid">
     <div class="hero-copy">
-      <span class="kicker pop">📌 2026–27 Planning Edition · links checked <span id="checkedOn">Oct 2026</span></span>
+      <span class="kicker pop">📌 2026–27 Planning Edition · links checked <span id="checkedOn">Oct 2026</span></span><span class="fresh-stamp" id="freshStamp" hidden></span>
       <h1 class="title" id="heroTitle">
         <span class="w">India's</span> <span class="w">Case-Comp</span> <span class="w">&amp;</span>
         <span class="w red marker">B-Fest<svg viewBox="0 0 220 24" preserveAspectRatio="none" aria-hidden="true"><path d="M4 16 C 60 6, 140 4, 216 12"/></svg></span>
@@ -93,6 +93,20 @@
     <h2 class="sec-title">Coming up next <span class="scribble">↓</span></h2>
     <p class="sec-sub rv">Counted from today. The bar shows how close the alert window is: start watching Unstop when it turns red.</p>
     <div class="next-rail" id="nextRail"></div>
+  </div>
+</section>
+
+
+<!-- ===== NOTICEBOARD (live from Unstop) ===== -->
+<section id="board" hidden>
+  <div class="wrap">
+    <span class="sec-tag" style="background:var(--green)">Live · from Unstop</span>
+    <h2 class="sec-title">Pinned on the noticeboard <span class="scribble">📌</span></h2>
+    <p class="sec-sub rv">Case comps at these fests with registrations open right now. Circled number = days left to register.</p>
+    <div class="cork">
+      <div class="tickets" id="tickets"></div>
+      <div class="board-foot"><span id="boardNote"></span><button id="boardMore" hidden></button></div>
+    </div>
   </div>
 </section>
 
@@ -228,8 +242,12 @@
   </div>
 </footer>
 
-<script src="/data.js?v=2"></script>
-<script src="/app.js?v=2"></script>
+<script src="/data.js?v=3"></script>
+<script src="/live.js?v=3"></script>
+<script src="/updates.js?v=3"></script>
+<script src="/app.js?v=3"></script>
+<script src="/board.js?v=3"></script>
+<dialog class="log" id="logDlg"><div class="log-h"><b>What changed</b><button id="logX" aria-label="Close">×</button></div><div class="log-b" id="logB"></div></dialog>
 
 <!-- Wispr Gate (email gate + Wispr Flow Pro claim), from ~/Downloads/wispr-gate-kit.
      The calendar shows its first cards then fades; routes, timing and handles stay hidden until signup. -->
