@@ -26,7 +26,7 @@ const DRY = process.argv.includes('--dry');
 let UNSTOP_ONLY = process.argv.includes('--unstop-only');
 const EVERY_DAYS = 10;
 const TODAY = new Date().toISOString().slice(0, 10);
-const MODEL = 'claude-haiku-5-5'; // cheapest model, lowest effort: keeps a full check to cents
+const MODEL = 'claude-haiku-5-5'; // cheapest model; high effort for better searching, still cents per check
 const log = (...a) => console.log(...a);
 
 /* ---------- data files: window.X = {...}; ---------- */
@@ -92,7 +92,7 @@ async function ask(system, prompt, useWeb = true) {
     const stream = client.messages.stream({
       model: MODEL,
       max_tokens: 16000,
-      output_config: { effort: 'low' },
+      output_config: { effort: 'high' },
       system,
       tools: useWeb ? TOOLS : undefined,
       messages,
