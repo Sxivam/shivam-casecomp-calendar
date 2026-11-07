@@ -4,273 +4,137 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Fest Map '26-27 · India's Case-Comp &amp; B-Fest Calendar | Shivam Meet</title>
-<meta name="description" content="Every IIM, IIT and DU fest worth competing in, mapped month by month for the 2026-27 season. Live countdowns, verified official links, prize pools and when to set your Unstop alerts. By Shivam Meet.">
+<meta name="description" content="Every IIM, IIT and DU fest worth competing in, month by month for the 2026-27 season. See what's open on Unstop right now, register in one tap, and set a reminder. By Shivam Meet.">
 <meta property="og:title" content="The Fest Map '26-27 by Shivam Meet">
-<meta property="og:description" content="51 IIM, IIT and DU fests mapped month by month, with live countdowns and verified links.">
+<meta property="og:description" content="India's B-fest and case comp calendar: what's open now, what's next, and the link to register.">
 <meta property="og:image" content="https://shivam-casecomp-calendar.vercel.app/creator.jpg">
 <meta name="theme-color" content="#fdfbf7">
 <link rel="icon" href="/creator.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&family=Patrick+Hand&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/styles.css?v=4">
+<link rel="stylesheet" href="/styles.css?v=6">
 </head>
 <body>
-<div class="ink-progress" id="progress"></div>
 
 <!-- ===== NAV ===== -->
 <nav id="nav">
   <div class="wrap">
-    <a class="brand" href="#top">
-      <img class="photo-nav" src="/creator.jpg" alt="Shivam Meet">
-      <span>The Fest Map <span class="red">'26–27</span></span>
+    <a class="brand" href="#top" aria-label="The Fest Map, back to top">
+      <img class="photo-nav" src="/creator.jpg" alt="" width="38" height="38">
+      <span>The Fest Map <span class="red">'26-27</span></span>
     </a>
     <div class="nav-links">
-      <a href="#next">Up next</a>
+      <a href="#now">Open now</a>
       <a href="#calendar">Calendar</a>
-      <a href="#tracks">Routes</a>
-      <a href="#leadtime">Timing</a>
-      <a class="social-btn" href="https://instagram.com/meet_.shivam" target="_blank" rel="noopener">@meet_.shivam</a>
+      <a class="ig-btn" href="https://instagram.com/meet_.shivam" target="_blank" rel="noopener">@meet_.shivam</a>
     </div>
   </div>
 </nav>
 
 <!-- ===== HERO ===== -->
 <header id="top">
-  <div class="wrap hero-grid">
+  <div class="wrap hero">
     <div class="hero-copy">
-      <span class="kicker pop">📌 2026–27 Planning Edition · links checked <span id="checkedOn">Oct 2026</span></span><span class="fresh-stamp" id="freshStamp" hidden></span>
-      <h1 class="title" id="heroTitle">
-        <span class="w">India's</span> <span class="w">Case-Comp</span> <span class="w">&amp;</span>
-        <span class="w red marker">B-Fest<svg viewBox="0 0 220 24" preserveAspectRatio="none" aria-hidden="true"><path d="M4 16 C 60 6, 140 4, 216 12"/></svg></span>
-        <span class="w">Calendar,</span> <span class="w blue">month</span> <span class="w blue">by</span> <span class="w blue">month.</span>
-      </h1>
-      <p class="subtitle rv">Every IIM, IIT &amp; DU fest worth competing in, mapped across the year. Prize pools, flagship events, live countdowns and the exact window to set your Unstop alerts.</p>
-      <p class="disclaimer rv"><span class="dtag">heads-up</span> This is a <b>calendar to track windows</b>. Registration links go live <b>as &amp; when organisers launch</b>. Every official site, Instagram and Unstop link below was re-checked for the new season.</p>
-      <div class="hero-cta rv">
-        <a class="btn" href="#calendar">Explore the calendar ↓</a>
-        <a class="btn blue" href="#next">What's next?</a>
-      </div>
+      <p class="kicker">2026-27 season · <span id="nFests">49</span> fests</p>
+      <h1 class="title">India's B-fest &amp; case comp <span class="red marker">calendar<svg viewBox="0 0 220 24" preserveAspectRatio="none" aria-hidden="true"><path d="M4 16 C 60 6, 140 4, 216 12"/></svg></span></h1>
+      <p class="sub" id="heroSub">Every IIM, IIT and DU fest worth competing in. See what's open, register in one tap, set a reminder for the rest.</p>
     </div>
-
-    <!-- year dial centrepiece -->
-    <div class="dial-wrap" id="dialWrap">
-      <svg class="dial" id="dial" viewBox="-170 -170 340 340" aria-label="Year dial showing how many fests happen each month">
+    <div class="dial-wrap" id="dialWrap" aria-hidden="true">
+      <svg class="dial" viewBox="-170 -170 340 340">
         <circle class="dial-ring" r="150"/>
         <circle class="dial-ring thin" r="96"/>
         <g id="dialSegs"></g>
         <g id="dialLabels"></g>
-        <g class="needle" id="needle">
-          <line x1="0" y1="0" x2="0" y2="-118"/>
-          <circle r="7"/>
-        </g>
+        <g class="needle" id="needle"><line x1="0" y1="0" x2="0" y2="-118"/><circle r="7"/></g>
       </svg>
-      <div class="dial-center">
-        <span class="dc-k">Today</span>
-        <span class="dc-v" id="todayLbl">8 Oct</span>
-      </div>
-      <div class="postit next-note" id="nextNote">
-        <span class="tack"></span>
-        <span class="nn-k">Next big one</span>
-        <b id="nnName">…</b>
-        <span id="nnInst" class="nn-inst"></span>
-        <span class="nn-cd" id="nnCd"></span>
-      </div>
-      <div class="polaroid">
-        <span class="tape"></span>
-        <img src="/creator.jpg" alt="Shivam Meet">
-        <b>Shivam Meet</b>
-        <span>✦ 134K+ on Instagram</span>
-      </div>
+      <div class="dial-center"><span>Today</span><b id="todayLbl"></b></div>
     </div>
   </div>
 </header>
 
-<!-- ===== UP NEXT ===== -->
-<section id="next">
+<!-- ===== OPEN NOW + NEXT UP (free) ===== -->
+<section id="now" aria-labelledby="h-now">
   <div class="wrap">
-    <span class="sec-tag" style="background:var(--blue)">Live · auto-updates daily</span>
-    <h2 class="sec-title">Coming up next <span class="scribble">↓</span></h2>
-    <p class="sec-sub rv">Counted from today. The bar shows how close the alert window is: start watching Unstop when it turns red.</p>
-    <div class="next-rail" id="nextRail"></div>
-  </div>
-</section>
-
-
-<!-- ===== NOTICEBOARD (live from Unstop) ===== -->
-<section id="board" hidden>
-  <div class="wrap">
-    <span class="sec-tag" style="background:var(--green)">Live · from Unstop</span>
-    <h2 class="sec-title">Pinned on the noticeboard <span class="scribble">📌</span></h2>
-    <p class="sec-sub rv">Case comps at these fests with registrations open right now. Circled number = days left to register.</p>
+    <h2 class="sec-title" id="h-now">Open now &amp; next up</h2>
+    <p class="sec-sub">Soonest first. The circled number is days left to register.</p>
     <div class="cork">
       <div class="tickets" id="tickets"></div>
-      <div class="board-foot"><span id="boardNote"></span><button id="boardMore" hidden></button></div>
-    </div>
-  </div>
-</section>
-
-<!-- ===== BIG PICTURE ===== -->
-<section id="bigpicture">
-  <div class="wrap">
-    <span class="sec-tag">The Big Picture</span>
-    <h2 class="sec-title">Two heavy clusters. One summer drought.</h2>
-    <p class="sec-sub rv">The whole calendar bunches into two windows. If you only optimise one quarter, optimise <b>Jan–March</b>.</p>
-    <div class="seismo rv" id="seismo">
-      <svg class="brackets" viewBox="0 0 1200 70" preserveAspectRatio="none" aria-hidden="true">
-        <path class="br" d="M8 60 Q8 20 50 20 L330 20 Q372 20 372 60"/>
-        <path class="br dr" d="M412 60 Q412 30 440 30 L640 30 Q668 30 668 60"/>
-        <path class="br" d="M708 60 Q708 20 750 20 L1150 20 Q1192 20 1192 60"/>
-      </svg>
-      <div class="br-lbls"><span>Cluster 1 · Jan–Apr</span><span class="muted">The drought · May–Jul</span><span>Cluster 2 · Aug–Dec</span></div>
-      <div class="bars" id="bars"></div>
+      <div class="cork-foot"><button class="btn-sm" id="moreTickets" type="button" hidden></button></div>
     </div>
   </div>
 </section>
 
 <!-- ===== CALENDAR ===== -->
-<section id="calendar">
+<section id="calendar" aria-labelledby="h-cal">
   <div class="wrap">
-    <span class="sec-tag">The Calendar</span>
-    <h2 class="sec-title">Filter the whole circuit ✦</h2>
-    <p class="sec-sub rv">Tap a month on the rail, pick a track, or search. Starred cards are the ones never to miss.</p>
-
-    <div class="month-rail" id="monthRail" role="tablist" aria-label="Months"></div>
-
-    <div class="filters">
-      <span class="tack"></span>
-      <div class="filter-row">
-        <span class="lbl">🔍</span>
-        <input id="search" type="text" placeholder="Search a fest, institute or event… e.g. Eureka, Strategikon, IIM Indore">
-      </div>
-      <div class="filter-row">
-        <span class="lbl">🎯</span>
-        <div class="chips" id="cat-chips"></div>
-      </div>
-      <div class="filter-row">
-        <span class="lbl">🏛</span>
-        <div class="chips" id="inst-chips"></div>
-      </div>
+    <h2 class="sec-title" id="h-cal">The calendar</h2>
+    <div class="months" id="months" role="tablist" aria-label="Filter by month"></div>
+    <div class="tools">
+      <label class="search"><span aria-hidden="true">🔍</span><span class="sr">Search fests</span><input id="search" type="search" placeholder="Search a fest, college or event" autocomplete="off"></label>
+      <div class="tracks" id="tracks" aria-label="Filter by track"></div>
     </div>
-
-    <div class="count-pill" id="count">Showing all events</div>
-    <div class="grid" id="cards"></div>
-    <div class="no-results" id="noresults">✏️ Nothing matches that combo. Try clearing a filter.</div>
-  </div>
-</section>
-
-<!-- ===== TRACKS ===== -->
-<section id="tracks">
-  <div class="wrap">
-    <span class="sec-tag">Pick Your Lane</span>
-    <h2 class="sec-title">Your route through the year</h2>
-    <p class="sec-sub rv">Don't chase everything. Pick a lane and watch the route draw itself across the season.</p>
-    <div class="route-tabs" id="routeTabs"></div>
-    <div class="route-board rv">
-      <svg class="route-svg" id="routeSvg" viewBox="0 0 1200 260" preserveAspectRatio="none" aria-hidden="true"></svg>
-      <div class="route-months" id="routeMonths"></div>
-      <div class="route-stops" id="routeStops"></div>
-    </div>
-    <ol class="route-list" id="routeList"></ol>
-  </div>
-</section>
-
-<!-- ===== LEAD TIME ===== -->
-<section id="leadtime">
-  <div class="wrap">
-    <span class="sec-tag">Timing</span>
-    <h2 class="sec-title">When to actually hit "register"</h2>
-    <p class="sec-sub rv">Golden rule: start watching Unstop + the host's Instagram <b>2 months before</b> the fest month. The ruler shows weeks before the event.</p>
-    <div class="ruler rv" id="ruler">
-      <div class="ruler-scale"><span>12 wks</span><span>10</span><span>8</span><span>6</span><span>4</span><span>2</span><span>Fest 🎉</span></div>
-      <div class="lead-row" style="--from:8;--to:3"><div class="lr-l"><b>Multi-round national case comps</b><i>Eureka!, Strategikon, The Fifth Move, Olympus</i></div><div class="lr-track"><span class="lr-bar"></span><span class="lr-tag">listings 6–8 wks · round 1 due 3–4 wks</span></div></div>
-      <div class="lead-row" style="--from:10;--to:6"><div class="lr-l"><b>B-plan / start-up pitching</b><i>Eureka! (IITB), Empresario (KGP), Pitch Premier (IITK)</i></div><div class="lr-track"><span class="lr-bar blue"></span><span class="lr-tag">decks open 8–10 wks</span></div></div>
-      <div class="lead-row" style="--from:5;--to:2"><div class="lr-l"><b>Online quiz + on-campus final</b><i>Kotler Sutra, Marketplace, Beat the Market</i></div><div class="lr-track"><span class="lr-bar green"></span><span class="lr-tag">opens 3–5 wks · quiz 2–3 wks</span></div></div>
-      <div class="lead-row" style="--from:4;--to:1"><div class="lr-l"><b>DU society case comps</b><i>Shri Ram Case Comp, Ramjas Caselympics, Ignite 180</i></div><div class="lr-track"><span class="lr-bar yellow"></span><span class="lr-tag">posted 3–4 wks · closes fast</span></div></div>
-    </div>
+    <div class="result-line"><span id="count"></span><button class="link-btn" id="clear" type="button" hidden>Clear filters</button></div>
+    <p class="tip">Tip: start watching Unstop and the fest's Instagram 2 months before the fest month.</p>
+    <div class="rows" id="rows"></div>
   </div>
 </section>
 
 <!-- ===== HANDLES ===== -->
-<section id="handles">
+<section id="handles" aria-labelledby="h-handles">
   <div class="wrap">
-    <span class="sec-tag" style="background:var(--red)">Follow These</span>
-    <h2 class="sec-title">Organiser handles to track</h2>
-    <p class="sec-sub rv">They post registration links before listings even hit Unstop. Tap to open on Instagram.</p>
-    <div class="handles" id="handles"></div>
-  </div>
-</section>
-
-<!-- ===== CAVEATS ===== -->
-<section id="caveats">
-  <div class="wrap">
-    <span class="sec-tag">Read the Fine Print</span>
-    <h2 class="sec-title">Before you plan your year</h2>
-    <div class="caveat rv">
-      <p><b>A few honest caveats so you don't get burned:</b></p>
-      <ul id="caveatList">
-        <li><b>Dates shift 2–6 weeks year to year.</b> Use the month here, then verify on Unstop and the host's Instagram 6–8 weeks out.</li>
-        <li><b>Mergers reduced the fest count.</b> Vista + Eximius = Venix (IIM-B). Intaglio + Carpe Diem + 7 Lakes Run = 7 Lakes Fest (IIM-C).</li>
-        <li><b>Prize pools are organiser-published</b> and may bundle in-kind sponsorship. Net cash prizes are usually a fraction.</li>
-        <li><b>DU society events are fluid.</b> Follow each <i>society</i>, not just the college.</li>
-        <li><b>Links were checked on <span class="checkedOn2">8 Oct 2026</span>.</b> A "✓" means the official page loaded that day. Organisers move sites between editions, so a link can break mid-season.</li>
-      </ul>
-    </div>
+    <h2 class="sec-title small" id="h-handles">Follow these <span id="nHandles">24</span> handles</h2>
+    <p class="sec-sub">They post registration links before Unstop does.</p>
+    <div class="handle-row" id="handleRow"></div>
   </div>
 </section>
 
 <!-- ===== FOOTER ===== -->
 <footer>
-  <div class="wrap">
-    <div class="foot-grid">
-      <div>
-        <h3>Built for <span class="wavy">everyone</span> who competes.</h3>
-        <p>If even one person found their first big stage through this map, it did its job. Save it, share it, and go win something.</p>
-        <div class="foot-socials">
-          <a href="https://instagram.com/meet_.shivam" target="_blank" rel="noopener">@meet_.shivam · 134K+</a>
-          <a href="https://www.linkedin.com/in/shivammeet/" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://shivammeet.com" target="_blank" rel="noopener">shivammeet.com</a>
-        </div>
-      </div>
-      <div class="foot-card">
-        <span class="tape"></span>
-        <img src="/creator.jpg" alt="Shivam Meet">
-        <div><b>Shivam Meet</b><span>Rank 1 on Unstop · 25+ case comp wins</span></div>
-      </div>
+  <div class="wrap foot">
+    <div class="foot-me">
+      <img src="/creator.jpg" alt="Shivam Meet" width="64" height="64">
+      <div><b>Made by Shivam Meet</b><span>134K+ on Instagram · Rank 1 on Unstop · 25+ case comp wins</span></div>
     </div>
-    <p class="foot-note">The Fest Map '26–27 · A free planning resource by Shivam Meet. Dates and prize pools are organiser-published and re-verified against public sources in October 2026; always confirm on Unstop and the host institute's official channels before registering. Not affiliated with any institution listed.</p>
+    <div class="foot-links">
+      <a href="https://instagram.com/meet_.shivam" target="_blank" rel="noopener">Instagram ↗</a>
+      <a href="https://www.linkedin.com/in/shivammeet/" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a href="https://shivammeet.com" target="_blank" rel="noopener">shivammeet.com ↗</a>
+    </div>
+    <p class="fine">Dates are estimates from past seasons. Always confirm on the organiser's page before you plan around them.</p>
+    <p class="fine">Links re-checked <span id="checkedOn"></span> · <button class="link-btn" id="logBtn" type="button">What changed</button> · Not affiliated with any institution listed.</p>
   </div>
 </footer>
 
-<script src="/data.js?v=3"></script>
-<script src="/live.js?v=3"></script>
-<script src="/updates.js?v=3"></script>
-<script src="/app.js?v=3"></script>
-<script src="/board.js?v=3"></script>
-<dialog class="log" id="logDlg"><div class="log-h"><b>What changed</b><button id="logX" aria-label="Close">×</button></div><div class="log-b" id="logB"></div></dialog>
+<dialog class="log" id="logDlg" aria-labelledby="logTitle"><div class="log-h"><b id="logTitle">What changed</b><button id="logX" type="button" aria-label="Close">×</button></div><div class="log-b" id="logB"></div></dialog>
+
+<script src="/data.js?v=5"></script>
+<script src="/live.js?v=5"></script>
+<script src="/updates.js?v=5"></script>
+<script src="/app.js?v=6"></script>
 
 <!-- Wispr Gate (email gate + Wispr Flow Pro claim), from ~/Downloads/wispr-gate-kit.
-     The calendar shows its first cards then fades; routes, timing and handles stay hidden until signup. -->
+     "Open now & next up" stays free; the calendar shows its first rows then fades; the handles stay hidden until signup. -->
 <link rel="stylesheet" href="/wispr/wispr-gate.css?v=5">
 <style>
   :root{--wg-bg:#fff;--wg-ink:var(--ink);--wg-sub:var(--faint);--wg-accent:var(--blue);--wg-accent-ink:#fff;--wg-border:var(--ink);
     --wg-field-bg:var(--paper);--wg-field-ink:var(--ink);--wg-head:'Kalam',cursive;--wg-font:'Patrick Hand',cursive;--wg-radius:14px;--wg-shadow:6px 6px 0 var(--ink)}
   .wg-card{border:2px solid var(--ink)!important;border-radius:var(--wobblySm)!important}
-  .wg-card h2{font-weight:700;font-size:46px;line-height:1;letter-spacing:-.01em}.wg-card h2+p{font-size:19px}.wg-btn{font-size:24px!important;min-height:58px}@media(max-width:600px){.wg-card h2{font-size:38px}}
+  .wg-card h2{font-weight:700;font-size:46px;line-height:1;letter-spacing:-.01em}.wg-card h2+p{font-size:19px}@media(max-width:600px){.wg-card h2{font-size:38px}}
   .wg-card input{border:2px solid var(--ink)!important;border-radius:var(--wobblySm)!important;font-size:19px}
-  .wg-btn{border-radius:var(--wobblySm)!important;font-family:'Kalam',cursive!important;font-size:20px!important;box-shadow:4px 4px 0 var(--ink)}
+  .wg-btn{border-radius:var(--wobblySm)!important;font-family:'Kalam',cursive!important;font-size:22px!important;min-height:56px;box-shadow:4px 4px 0 var(--ink)}
   .wg-offer{border-radius:var(--wobblySm);font-family:'Patrick Hand',cursive;font-size:17px;transform:rotate(-1deg)}
   #calendar.wg-locked{-webkit-mask-image:linear-gradient(#000 55%,transparent 96%);mask-image:linear-gradient(#000 55%,transparent 96%)}
 </style>
 <script>
 window.WISPR_GATE = {
-  lock: "#calendar, #tracks, #leadtime, #handles",
-  peek: "#cards",
-  peekExtra: 520,
-  offerAt: ".hero-cta",
+  lock: "#calendar, #handles",
+  peek: "#rows",
+  peekExtra: 380,
+  offerAt: "#heroSub",
   title: "Unlock it all. FREE.",
   lede: "Just your name and email. No payment, ever.",
-  perks: [`All ${(window.FEST && window.FEST.events.length) || 47} fests with dates, prizes and links`],
+  perks: [`All ${(window.FEST && window.FEST.events.length) || 49} fests with dates, prizes and links`],
   button: "Unlock for FREE",
   welcome: ["Every fest on the map, unlocked"],
   note: "Talk your case notes into Wispr Flow. It works in every app.",
