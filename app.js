@@ -135,7 +135,7 @@
     ...liveOk.map((x) => ({ kind: 'live', date: x.endDate, x })),
     ...nextFests.map((ev) => ({ kind: 'fest', date: ev.next, ev })),
   ].sort((a, b) => a.date - b.date);
-  const SHOW = 6;
+  const SHOW = matchMedia('(max-width: 640px)').matches ? 4 : 6;
   let showAll = false;
   function ticket(it, i) {
     const r = [-1.6, 1.2, -0.8, 1.8, -1.2, 0.8][i % 6];
