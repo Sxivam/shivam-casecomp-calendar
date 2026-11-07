@@ -138,10 +138,24 @@ const changes = [];
 const getAt = (o, k) => k.split('.').reduce((a, p) => (a == null ? a : a[p]), o);
 const setAt = (o, k, v) => { const ps = k.split('.'); let a = o; ps.slice(0, -1).forEach((p) => { a[p] = a[p] && typeof a[p] === 'object' ? a[p] : {}; a = a[p]; }); a[ps.at(-1)] = v; };
 
+const MON = { jan: 1, feb: 2, mar: 3, apr: 4, may: 5, jun: 6, jul: 7, aug: 8, sep: 9, oct: 10, nov: 11, dec: 12 };
+// months a window text covers, e.g. "Sep–Nov" -> 9,10,11; "Nov–Dec reg · finale Mar" -> 11,12 (first range only)
+function windowMonths(t) {
+  const ms = [...String(t || '').toLowerCase().matchAll(/\b(jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)/g)].map((m) => MON[m[1]]);
+  if (!ms.length) return null;
+  const [a, b] = [ms[0], ms[1] && /^[^·;,(]*$/.test(String(t).split(/[·;,(]/)[0]) ? ms[1] : ms[0]];
+  const out = []; for (let m = a, i = 0; i < 12; i++, m = m % 12 + 1) { out.push(m); if (m === b) break; } return out;
+}
 async function applyPatch(p) {
   const e = byId.get(String(p.id));
   if (!e) return log(`  skip: unknown id ${p.id}`);
   if (!p.source || !/^https?:\/\//.test(p.source)) return log(`  skip ${p.id}: no source`);
+  // a new window text must still contain the month the entry is filed under (or move both together)
+  const MC = CFG.monthCheck;
+  if (MC && p.set && p.set[MC.text] !== undefined) {
+    const mo = p.set[MC.month] ?? e[MC.month], wm = windowMonths(p.set[MC.text]);
+    if (wm && !/dormant/i.test(p.set[MC.text]) && !wm.includes(mo)) { log(`  skip ${p.id}.${MC.text}: "${p.set[MC.text]}" does not include month ${mo}`); delete p.set[MC.text]; }
+  }
   for (const [field, value] of Object.entries(p.set || {})) {
     const rule = CFG.fields[field];
     if (!rule) { log(`  skip ${p.id}.${field}: not an editable field`); continue; }

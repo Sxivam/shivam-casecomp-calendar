@@ -41,7 +41,7 @@
   },
   "fieldDocs": {
     "m": "number 1-12, the month the fest usually happens",
-    "d": "short text, usual timing, e.g. 'Late Feb – early Mar'",
+    "d": "short text, usual timing, e.g. 'Late Feb – early Mar'. MUST include the month in \"m\" (that is the month registrations open). Do not put the finale or result month here.",
     "reg": "short text, when registrations usually open",
     "last": "dates of the most recent edition that has happened, e.g. 'Feb 27 - Mar 1, 2026'",
     "start": "ISO date YYYY-MM-DD of the next edition's first day, only if officially announced",
@@ -85,5 +85,9 @@
     "include": "indian institute of management|indian institute of technology|\\(iim\\)|\\(iit\\)|xlri|university of delhi|shri ram|fms|mdi|spjimr|nmims|iift|management development institute",
     "exclude": "",
     "titleMust": "case|challenge|b-plan|business|strategy|marketing|consult|finance|product"
+  },
+  "monthCheck": {
+    "month": "m",
+    "text": "d"
   }
 }
