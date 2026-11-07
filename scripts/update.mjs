@@ -26,7 +26,7 @@ const DRY = process.argv.includes('--dry');
 let UNSTOP_ONLY = process.argv.includes('--unstop-only');
 const EVERY_DAYS = 10;
 const TODAY = new Date().toISOString().slice(0, 10);
-const MODEL = 'claude-haiku-5-5'; // cheapest model; high effort for better searching, still cents per check
+const MODEL = 'claude-haiku-5-5'; // Haiku 5.5 at medium effort ONLY (his rule). Never switch to Opus/Sonnet.
 const log = (...a) => console.log(...a);
 
 /* ---------- data files: window.X = {...}; ---------- */
@@ -92,7 +92,7 @@ async function ask(system, prompt, useWeb = true) {
     const stream = client.messages.stream({
       model: MODEL,
       max_tokens: 16000,
-      output_config: { effort: 'high' },
+      output_config: { effort: 'medium' },
       system,
       tools: useWeb ? TOOLS : undefined,
       messages,
