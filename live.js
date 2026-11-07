@@ -1,19 +1,8 @@
 /* Open competitions on Unstop, refreshed by scripts/update.mjs. Titles, dates and links come straight from Unstop. */
 window.LIVE = {
- "updated": "2026-11-06",
+ "updated": "2026-11-07",
  "source": "unstop.com",
  "items": [
-  {
-   "id": 1774039,
-   "title": "TollGate: A Finance Case Competition",
-   "org": "Xavier School of Management (XLRI), Delhi",
-   "festival": "",
-   "ends": "2026-11-06T23:59:00+05:30",
-   "url": "https://unstop.com/competitions/tollgate-a-finance-case-competition-nova-exilaro26-xlri-delhi-1774039",
-   "region": "online",
-   "match": null,
-   "track": "Finance"
-  },
   {
    "id": 1792020,
    "title": "AdTract - Marketing Case Competition",
@@ -167,17 +156,6 @@ window.LIVE = {
    "region": "offline",
    "match": null,
    "track": "Ops"
-  },
-  {
-   "id": 1774366,
-   "title": "Capital Quest",
-   "org": "Indian Institute of Management (IIM), Udaipur",
-   "festival": "",
-   "ends": "2026-11-07T00:00:00+05:30",
-   "url": "https://unstop.com/competitions/capital-quest-solaris-2026--1774366",
-   "region": "online",
-   "match": null,
-   "track": "Finance"
   },
   {
    "id": 1787492,
