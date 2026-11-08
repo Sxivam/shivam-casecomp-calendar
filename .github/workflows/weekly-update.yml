@@ -11,8 +11,8 @@ on:
         type: choice
         options: [full, unstop]
 
-permissions:
-  contents: write
+# Nothing by default; the one job below gets only what it needs.
+permissions: {}
 
 concurrency:
   group: self-update
@@ -22,13 +22,20 @@ jobs:
   update:
     runs-on: ubuntu-latest
     timeout-minutes: 60
+    permissions:
+      contents: write
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
+      # Actions pinned to exact commits (v4), so a moved tag can't swap in different code.
+      # persist-credentials: false keeps the GitHub token out of .git/config, away from npm packages and the updater.
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: 22
           cache: npm
-      - run: npm ci --omit=dev || npm install --no-audit --no-fund
+      # Exact versions from package-lock.json only, and no package install scripts. No fallback to "npm install".
+      - run: npm ci --omit=dev --ignore-scripts --no-audit --no-fund
       - name: Run the updater
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
@@ -42,10 +49,12 @@ jobs:
             node scripts/update.mjs | tee update-log.txt
           fi
       - name: Commit changes
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           git config user.name "case-comp-updater"
           git config user.email "actions@users.noreply.github.com"
           git add -- data.js live.js updates.js
           if git diff --cached --quiet; then echo "No changes"; exit 0; fi
           git commit -m "Auto update $(date +%F)" -m "$(tail -40 update-log.txt 2>/dev/null || echo 'Unstop open list refreshed')"
-          git push
+          git push "https://x-access-token:${GH_TOKEN}@github.com/${{ github.repository }}.git" HEAD:main

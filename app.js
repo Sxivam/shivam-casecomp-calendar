@@ -17,6 +17,8 @@
   const CAT_LABEL = Object.fromEntries(CATS);
 
   const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  // Only plain web links reach an href; anything else (javascript:, data:, odd schemes) becomes a dead link.
+  const safeUrl = (u) => (/^https?:\/\//i.test(String(u || '').trim()) ? String(u).trim() : '#');
   // house rule: no em or en dashes in visible copy (the data sometimes has them)
   const clean = (s) => String(s == null ? '' : s).replace(/\s*—\s*/g, ', ').replace(/\s+–\s+/g, ' to ').replace(/–/g, '-').trim();
   const t = (s) => esc(clean(s));
@@ -146,7 +148,7 @@
         <p class="tkt-k">Registration closes ${fmt(x.endDate)}</p>
         <h3>${t(x.title)}</h3>
         <p class="tkt-org">${t(x.org)}${x.match ? ` · ${t(x.match)}` : ''}</p>
-        <div class="acts"><a class="btn-go" href="${esc(x.url)}" target="_blank" rel="noopener">Register ↗</a>
+        <div class="acts"><a class="btn-go" href="${esc(safeUrl(x.url))}" target="_blank" rel="noopener">Register ↗</a>
         <a class="btn-ghost" href="${gcal(`Deadline: ${clean(x.title)}`, x.endDate, x.url)}" target="_blank" rel="noopener" aria-label="Add the ${t(x.title)} deadline to Google Calendar">Remind me</a></div></article>`;
     }
     const ev = it.ev, p = primary(ev), n = ev.days;
@@ -156,7 +158,7 @@
       <p class="tkt-k">Fest${ev.exact ? ` starts ${fmt(ev.next)}` : `, usually ${MONTHS[ev.m - 1]}`}${ev.isNew ? ' <span class="new">new</span>' : ''}</p>
       <h3>${t(ev.n)}</h3>
       <p class="tkt-org">${t(ev.inst)}</p>
-      <div class="acts"><a class="btn-go" href="${esc(p.href)}" target="_blank" rel="noopener">${p.label}</a>
+      <div class="acts"><a class="btn-go" href="${esc(safeUrl(p.href))}" target="_blank" rel="noopener">${p.label}</a>
       <a class="btn-ghost" href="${gcal(`Register: ${clean(ev.n)} (${clean(ev.inst)})`, regDate(ev), p.href)}" target="_blank" rel="noopener" aria-label="Add a reminder for ${t(ev.n)} to Google Calendar">Remind me</a></div></article>`;
   }
   function renderTickets() {
@@ -213,13 +215,13 @@
         <p class="r-meta">${t(ev.inst)} · ${t(ev.d)}</p>
       </div>
       <div class="acts">
-        <a class="btn-go" href="${esc(p.href)}" target="_blank" rel="noopener">${p.label}</a>
+        <a class="btn-go" href="${esc(safeUrl(p.href))}" target="_blank" rel="noopener">${p.label}</a>
         <a class="btn-ghost" href="${remind}" target="_blank" rel="noopener" aria-label="Add a reminder for ${t(ev.n)} to Google Calendar">Remind me</a>
         <button class="r-more" type="button" aria-expanded="false" aria-controls="${id}">Details</button>
       </div>
       <div class="r-details" id="${id}" hidden>
         <dl>${dl}</dl>
-        ${more.length ? `<p class="r-links">${more.map(([u, l]) => `<a href="${esc(u)}" target="_blank" rel="noopener">${l} ↗</a>`).join('')}</p>` : ''}
+        ${more.length ? `<p class="r-links">${more.map(([u, l]) => `<a href="${esc(safeUrl(u))}" target="_blank" rel="noopener">${l} ↗</a>`).join('')}</p>` : ''}
       </div>
     </article>`;
   }
@@ -261,7 +263,7 @@
 
   /* ---------- handles ---------- */
   $('#nHandles').textContent = HANDLES.length;
-  $('#handleRow').innerHTML = HANDLES.map((h) => { const u = String(h).replace(/^@/, ''); return `<a class="handle" href="${igUrl(u)}" target="_blank" rel="noopener">@${esc(u)}</a>`; }).join('');
+  $('#handleRow').innerHTML = HANDLES.map((h) => { const u = String(h).replace(/^@/, ''); return `<a class="handle" href="${esc(safeUrl(igUrl(u)))}" target="_blank" rel="noopener">@${esc(u)}</a>`; }).join('');
 
   /* ---------- what changed (updates.js) ---------- */
   const U = window.UPDATES, dlg = $('#logDlg');
@@ -270,7 +272,7 @@
   if (!runs.length) $('#logBtn').hidden = true;
   $('#logBtn').addEventListener('click', () => {
     $('#logB').innerHTML = runs.slice(0, 6).map((r) => `<h4>${fmt(new Date(r.date + 'T00:00:00'))} · ${r.changes.length} ${r.changes.length === 1 ? 'change' : 'changes'}</h4>${r.changes.length
-      ? '<ul>' + r.changes.map((c) => `<li><b>${t(c.name)}</b>: ${esc(LBL[c.field] || c.field)} ${c.field === '(new entry)' ? '' : `${t(c.from ?? 'none')} → `}${t(c.to)} <a href="${esc(c.source)}" target="_blank" rel="noopener">source</a></li>`).join('') + '</ul>'
+      ? '<ul>' + r.changes.map((c) => `<li><b>${t(c.name)}</b>: ${esc(LBL[c.field] || c.field)} ${c.field === '(new entry)' ? '' : `${t(c.from ?? 'none')} → `}${t(c.to)} <a href="${esc(safeUrl(c.source))}" target="_blank" rel="noopener">source</a></li>`).join('') + '</ul>'
       : '<p>Nothing changed. Every fest still matched its sources.</p>'}`).join('');
     dlg.showModal();
   });

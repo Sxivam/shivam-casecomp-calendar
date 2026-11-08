@@ -146,6 +146,24 @@ function windowMonths(t) {
   const [a, b] = [ms[0], ms[1] && /^[^·;,(]*$/.test(String(t).split(/[·;,(]/)[0]) ? ms[1] : ms[0]];
   const out = []; for (let m = a, i = 0; i < 12; i++, m = m % 12 + 1) { out.push(m); if (m === b) break; } return out;
 }
+// Links written by the model must be plain https, and an existing official link can't be moved to a new
+// domain (a poisoned web page could otherwise swap in a phishing page that "loads fine").
+const TRUSTED_HOSTS = ['unstop.com', 'instagram.com', 'linkedin.com'];
+// registrable domain: hul.co.in, iima.ac.in and bcg.com stay whole (handles two-part endings like .co.in / .ac.in)
+const baseDomain = (h) => { const p = h.replace(/^www\./, '').toLowerCase().split('.'); const n = p.length >= 3 && p.at(-1).length === 2 && /^(co|ac|org|net|gov|edu|com|res|nic)$/.test(p.at(-2)) ? 3 : 2; return p.slice(-n).join('.'); };
+function safeLink(url, oldUrl) {
+  let u; try { u = new URL(String(url)); } catch { return false; }
+  if (u.protocol !== 'https:' || u.username || u.password) return false;
+  if (/^[\d.]+$|^\[|localhost/i.test(u.hostname)) return false;
+  if (oldUrl) {
+    let o; try { o = new URL(String(oldUrl)); } catch { o = null; }
+    if (o && baseDomain(o.hostname) !== baseDomain(u.hostname) && !TRUSTED_HOSTS.includes(baseDomain(u.hostname))) return false;
+  }
+  return true;
+}
+const MAX_CHANGES = 40, MAX_LINK_CHANGES = 10;
+let linkChanges = 0;
+
 async function applyPatch(p) {
   const e = byId.get(String(p.id));
   if (!e) return log(`  skip: unknown id ${p.id}`);
@@ -159,7 +177,13 @@ async function applyPatch(p) {
   for (const [field, value] of Object.entries(p.set || {})) {
     const rule = CFG.fields[field];
     if (!rule) { log(`  skip ${p.id}.${field}: not an editable field`); continue; }
-    if (rule === 'url' && !(await alive(value))) { log(`  skip ${p.id}.${field}: link doesn't load (${value})`); continue; }
+    if (changes.length >= MAX_CHANGES) { log(`  stop: ${MAX_CHANGES} changes reached this run`); return; }
+    if (rule === 'url') {
+      if (!safeLink(value, getAt(e, field))) { log(`  skip ${p.id}.${field}: not an allowed link (${value})`); continue; }
+      if (linkChanges >= MAX_LINK_CHANGES) { log(`  skip ${p.id}.${field}: link change cap reached`); continue; }
+      if (!(await alive(value))) { log(`  skip ${p.id}.${field}: link doesn't load (${value})`); continue; }
+      linkChanges++;
+    }
     if (rule === 'month' && !(Number.isInteger(value) && value >= 1 && value <= 12)) continue;
     if (rule === 'bool' && typeof value !== 'boolean') continue;
     if (rule === 'text' && (typeof value !== 'string' || value.length > 400)) continue;
@@ -264,7 +288,18 @@ Return {"additions":[{"entry":{...same shape...},"source":"<url you opened>"}]}.
       const name = String(e[CFG.nameKey] || '').trim();
       if (!name || !a.source || !(await alive(a.source))) { log(`   skip addition ${name}: no working source`); continue; }
       if (entries.some((x) => String(x[CFG.nameKey]).toLowerCase() === name.toLowerCase())) continue;
-      const entry = { ...CFG.addTemplate, ...e, added: TODAY, isNew: true };
+      // Build the entry ONLY from the template's own fields, each forced to the template's type. Nothing else gets in.
+      const entry = { added: TODAY, isNew: true };
+      for (const [k, tv] of Object.entries(CFG.addTemplate)) {
+        const v = e[k];
+        if (Array.isArray(tv)) entry[k] = Array.isArray(v) ? v.filter((x) => typeof x === 'string').map((x) => x.slice(0, 40)).slice(0, 10) : tv;
+        else if (typeof tv === 'number') entry[k] = Number.isInteger(v) && v >= 1 && v <= 12 ? v : tv;
+        else if (typeof tv === 'boolean') entry[k] = typeof v === 'boolean' ? v : tv;
+        else if (tv && typeof tv === 'object') entry[k] = {};
+        else entry[k] = typeof v === 'string' ? v.replace(/\s[—–]\s/g, ', ').slice(0, 400) : tv;
+      }
+      for (const k of ['logo', 'orgLogo']) if (k in entry) entry[k] = ''; // logos are local files only, added by hand
+      for (const [k, rule] of Object.entries(CFG.fields)) if (rule === 'url') { const v = getAt(e, k); if (v && safeLink(v)) setAt(entry, k, v); else if (getAt(entry, k)) setAt(entry, k, ''); }
       if (CFG.idKey !== CFG.nameKey) entry[CFG.idKey] = String(e[CFG.idKey] || name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, ''));
       if (byId.has(String(entry[CFG.idKey]))) continue;
       for (const [k, rule] of Object.entries(CFG.fields)) if (rule === 'url' && getAt(entry, k) && !(await alive(getAt(entry, k)))) setAt(entry, k, undefined);
