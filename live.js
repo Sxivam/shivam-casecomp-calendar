@@ -1,6 +1,6 @@
 /* Open competitions on Unstop, refreshed by scripts/update.mjs. Titles, dates and links come straight from Unstop. */
 window.LIVE = {
- "updated": "2026-11-07",
+ "updated": "2026-11-08",
  "source": "unstop.com",
  "items": [
   {
@@ -118,7 +118,7 @@ window.LIVE = {
    "title": "Founder Of The Year 6.0 - Annual Flagship Case Competition",
    "org": "Sri Guru Tegh Bahadur Khalsa College (SGTB Khalsa), University of Delhi (DU), New Delhi",
    "festival": "",
-   "ends": "2026-11-08T23:59:00+05:30",
+   "ends": "2026-11-09T16:59:00+05:30",
    "url": "https://unstop.com/competitions/founder-of-the-year-60-annual-flagship-case-competition-sri-guru-tegh-bahadur-khalsa-college-sgtb-khalsa-du-1776218",
    "region": "hybrid",
    "match": null,
@@ -158,15 +158,15 @@ window.LIVE = {
    "track": "Ops"
   },
   {
-   "id": 1787492,
-   "title": "Prabhav 7.0",
-   "org": "Indian Institute of Management (IIM), Nagpur",
+   "id": 1773188,
+   "title": "Ad-Vantage",
+   "org": "Indian Institute of Management (IIM), Kashipur",
    "festival": "",
-   "ends": "2026-11-07T23:59:00+05:30",
-   "url": "https://unstop.com/competitions/prabhav-70-indian-institute-of-management-iim-nagpur-1787492",
+   "ends": "2026-11-08T22:30:00+05:30",
+   "url": "https://unstop.com/competitions/ad-vantage-iim-kashipur-1773188",
    "region": "online",
    "match": null,
-   "track": "General"
+   "track": "Marketing"
   },
   {
    "id": 1794745,
@@ -178,17 +178,6 @@ window.LIVE = {
    "region": "online",
    "match": null,
    "track": "Strategy"
-  },
-  {
-   "id": 1773188,
-   "title": "Ad-Vantage",
-   "org": "Indian Institute of Management (IIM), Kashipur",
-   "festival": "",
-   "ends": "2026-11-08T22:30:00+05:30",
-   "url": "https://unstop.com/competitions/ad-vantage-iim-kashipur-1773188",
-   "region": "online",
-   "match": null,
-   "track": "Marketing"
   },
   {
    "id": 1786648,
