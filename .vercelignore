@@ -1,3 +1,11 @@
 .admin-key.local
 .env.local
 _backup
+.env*
+.vercel
+.claude
+.github
+scripts
+node_modules
+*.md
+.DS_Store

@@ -1,10 +1,13 @@
 import { list } from "@vercel/blob";
 import { safeEqual } from "./_lib/auth.js";
 
-// Shivam's private export: /api/export?key=ADMIN_KEY  (add &format=json for JSON)
+// Shivam's private export. Send the key in a header, never in the URL (URLs end up in logs and history):
+//   curl -H "x-admin-key: $ADMIN_KEY" https://<site>/api/export            (add ?format=json for JSON)
 export default async function handler(req, res) {
   const url = new URL(req.url, "http://x");
-  if (!safeEqual(url.searchParams.get("key"), process.env.ADMIN_KEY)) return res.status(401).send("Not allowed");
+  res.setHeader("Cache-Control", "no-store");
+  if (req.method !== "GET") return res.status(405).send("GET only");
+  if (!safeEqual(req.headers["x-admin-key"], process.env.ADMIN_KEY)) return res.status(401).send("Not allowed");
 
   const rows = new Map();
   let cursor;
@@ -25,7 +28,8 @@ export default async function handler(req, res) {
   const out = [...rows.values()].sort((a, b) => a.first_seen.localeCompare(b.first_seen));
   res.setHeader("Cache-Control", "no-store");
   if (url.searchParams.get("format") === "json") return res.status(200).json({ total: out.length, signups: out });
-  const esc = v => `"${String(v).replace(/"/g, '""')}"`;
+  // A leading = + - @ (or tab/CR) would run as a formula in Sheets/Excel: prefix with ' so it stays text.
+  const esc = v => { let s = String(v); if (/^[=+\-@\t\r]/.test(s)) s = "'" + s; return `"${s.replace(/"/g, '""')}"`; };
   const csv = ["name,email,first_seen,last_seen,visits", ...out.map(r => [r.name, r.email, r.first_seen, r.last_seen, r.visits].map(esc).join(","))].join("\n");
   res.setHeader("Content-Type", "text/csv; charset=utf-8");
   res.setHeader("Content-Disposition", `attachment; filename="signups.csv"`);

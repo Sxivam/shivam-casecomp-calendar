@@ -113,3 +113,6 @@
   .wg-psticker.on{transform:rotate(8deg)}
   .wg-pcard,.wg-say span,.wg-list li,.wg-cta,.wg-dock{transition:none}
 }
+
+/* honeypot: off-screen, invisible to people and screen readers */
+.wg-hp{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;opacity:0!important;pointer-events:none!important}

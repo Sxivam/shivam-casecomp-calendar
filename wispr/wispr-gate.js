@@ -113,6 +113,7 @@
       <input id="wg-name" autocomplete="name" required maxlength="80" placeholder="Your name">
       <label for="wg-email">Email</label>
       <input id="wg-email" type="email" inputmode="email" autocomplete="email" required placeholder="you@college.edu">
+      <input id="wg-website" class="wg-hp" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
       <button class="wg-btn" type="submit">${esc(C.button)}</button>
       <p class="wg-err" role="alert"></p>
       <p class="wg-fine">${esc(C.fine)}</p>
@@ -232,7 +233,7 @@
     btn.innerHTML = `<span class="fbar sm" aria-label="Unlocking"></span>`;
     const gb = flowBar($(".fbar", btn), 11); gb.talk();
     try {
-      const [r] = await Promise.all([fetch("/api/unlock", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ name, email, source: (location.pathname + location.hash) + (document.referrer ? " via " + document.referrer : "") }) }), wait(700)]);
+      const [r] = await Promise.all([fetch("/api/unlock", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ name, email, website: $("#wg-website").value, source: (location.pathname + location.hash) + (document.referrer ? " via " + document.referrer : "") }) }), wait(700)]);
       const d = await r.json().catch(() => ({}));
       if (!r.ok) throw new Error(d.error || "Something went wrong. Try again.");
       gb.idle(); setLocked(false);
