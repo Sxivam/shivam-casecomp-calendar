@@ -1,6 +1,6 @@
 /* Open competitions on Unstop, refreshed by scripts/update.mjs. Titles, dates and links come straight from Unstop. */
 window.LIVE = {
- "updated": "2026-11-08",
+ "updated": "2026-11-09",
  "source": "unstop.com",
  "items": [
   {
@@ -156,17 +156,6 @@ window.LIVE = {
    "region": "offline",
    "match": null,
    "track": "Ops"
-  },
-  {
-   "id": 1773188,
-   "title": "Ad-Vantage",
-   "org": "Indian Institute of Management (IIM), Kashipur",
-   "festival": "",
-   "ends": "2026-11-08T22:30:00+05:30",
-   "url": "https://unstop.com/competitions/ad-vantage-iim-kashipur-1773188",
-   "region": "online",
-   "match": null,
-   "track": "Marketing"
   },
   {
    "id": 1794745,
