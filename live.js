@@ -1,6 +1,6 @@
 /* Open competitions on Unstop, refreshed by scripts/update.mjs. Titles, dates and links come straight from Unstop. */
 window.LIVE = {
- "updated": "2026-11-09",
+ "updated": "2026-11-10",
  "source": "unstop.com",
  "items": [
   {
@@ -46,17 +46,6 @@ window.LIVE = {
    "region": "online",
    "match": null,
    "track": "General"
-  },
-  {
-   "id": 1787004,
-   "title": "PetKids Paws and Grow Business Case Competition",
-   "org": "Indian Institute of Management (IIM), Ranchi",
-   "festival": "",
-   "ends": "2026-11-10T00:00:00+05:30",
-   "url": "https://unstop.com/competitions/petkids-paws-and-grow-business-case-competition-indian-institute-of-management-iim-ranchi-1787004",
-   "region": "online",
-   "match": null,
-   "track": "Marketing"
   },
   {
    "id": 1784601,
@@ -107,22 +96,11 @@ window.LIVE = {
    "title": "ASCEND 3.0 - The Ultimate Marketing Case Competition",
    "org": "Hansraj College,University of Delhi",
    "festival": "",
-   "ends": "2026-11-10T11:59:00+05:30",
+   "ends": "2026-11-10T23:59:00+05:30",
    "url": "https://unstop.com/competitions/ascend-30-the-ultimate-marketing-case-competition-hansraj-collegeuniversity-of-delhi-1769878",
    "region": "offline",
    "match": null,
    "track": "Marketing"
-  },
-  {
-   "id": 1776218,
-   "title": "Founder Of The Year 6.0 - Annual Flagship Case Competition",
-   "org": "Sri Guru Tegh Bahadur Khalsa College (SGTB Khalsa), University of Delhi (DU), New Delhi",
-   "festival": "",
-   "ends": "2026-11-09T16:59:00+05:30",
-   "url": "https://unstop.com/competitions/founder-of-the-year-60-annual-flagship-case-competition-sri-guru-tegh-bahadur-khalsa-college-sgtb-khalsa-du-1776218",
-   "region": "hybrid",
-   "match": null,
-   "track": "General"
   },
   {
    "id": 1773066,
@@ -158,17 +136,6 @@ window.LIVE = {
    "track": "Ops"
   },
   {
-   "id": 1794745,
-   "title": "Consultimate 6.0",
-   "org": "Indian Institute of Management (IIM), Visakhapatnam",
-   "festival": "",
-   "ends": "2026-11-10T23:59:18+05:30",
-   "url": "https://unstop.com/competitions/consultimate-60--1794745",
-   "region": "online",
-   "match": null,
-   "track": "Strategy"
-  },
-  {
    "id": 1786648,
    "title": "Finvestors 6.0 - Stock Analysis Challenge",
    "org": "Indian Institute of Management (IIM), Visakhapatnam",
@@ -178,6 +145,17 @@ window.LIVE = {
    "region": "online",
    "match": null,
    "track": "Finance"
+  },
+  {
+   "id": 1794745,
+   "title": "Consultimate 6.0",
+   "org": "Indian Institute of Management (IIM), Visakhapatnam",
+   "festival": "",
+   "ends": "2026-11-10T23:59:18+05:30",
+   "url": "https://unstop.com/competitions/consultimate-60--1794745",
+   "region": "online",
+   "match": null,
+   "track": "Strategy"
   },
   {
    "id": 1790448,
