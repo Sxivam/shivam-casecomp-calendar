@@ -1,6 +1,6 @@
 /* Open competitions on Unstop, refreshed by scripts/update.mjs. Titles, dates and links come straight from Unstop. */
 window.LIVE = {
- "updated": "2026-11-10",
+ "updated": "2026-11-11",
  "source": "unstop.com",
  "items": [
   {
@@ -59,17 +59,6 @@ window.LIVE = {
    "track": "Marketing"
   },
   {
-   "id": 1746033,
-   "title": "Tech Tack- Product Management Case Competition-2026",
-   "org": "Xavier School of Management (XLRI)",
-   "festival": "",
-   "ends": "2026-11-30T01:02:42+05:30",
-   "url": "https://unstop.com/competitions/tech-tack-product-management-case-competition-2026-ensemble-valhalla-2026-xavier-school-of-management-xlri-1746033",
-   "region": "online",
-   "match": null,
-   "track": "Product"
-  },
-  {
    "id": 1773216,
    "title": "ECOGEN: National Sustainability Case Competition, 2026",
    "org": "Institute of Management Technology (IMT), Nagpur",
@@ -79,28 +68,6 @@ window.LIVE = {
    "region": "hybrid",
    "match": null,
    "track": "Sustainability"
-  },
-  {
-   "id": 1791164,
-   "title": "FMA Gargi X FIC DDUC Finance Case Competition",
-   "org": "Finance Management Association, Gargi and Finance and Investment Cell, DDUC",
-   "festival": "",
-   "ends": "2026-11-10T23:59:00+05:30",
-   "url": "https://unstop.com/competitions/fma-gargi-x-fic-dduc-finance-case-competition-finance-management-association-gargi-and-finance-and-investme-1791164",
-   "region": "hybrid",
-   "match": null,
-   "track": "Finance"
-  },
-  {
-   "id": 1769878,
-   "title": "ASCEND 3.0 - The Ultimate Marketing Case Competition",
-   "org": "Hansraj College,University of Delhi",
-   "festival": "",
-   "ends": "2026-11-10T23:59:00+05:30",
-   "url": "https://unstop.com/competitions/ascend-30-the-ultimate-marketing-case-competition-hansraj-collegeuniversity-of-delhi-1769878",
-   "region": "offline",
-   "match": null,
-   "track": "Marketing"
   },
   {
    "id": 1773066,
@@ -136,22 +103,11 @@ window.LIVE = {
    "track": "Ops"
   },
   {
-   "id": 1786648,
-   "title": "Finvestors 6.0 - Stock Analysis Challenge",
-   "org": "Indian Institute of Management (IIM), Visakhapatnam",
-   "festival": "",
-   "ends": "2026-11-10T23:59:00+05:30",
-   "url": "https://unstop.com/competitions/finvestors-60-stock-analysis-challenge--1786648",
-   "region": "online",
-   "match": null,
-   "track": "Finance"
-  },
-  {
    "id": 1794745,
    "title": "Consultimate 6.0",
    "org": "Indian Institute of Management (IIM), Visakhapatnam",
    "festival": "",
-   "ends": "2026-11-10T23:59:18+05:30",
+   "ends": "2026-11-11T23:59:35+05:30",
    "url": "https://unstop.com/competitions/consultimate-60--1794745",
    "region": "online",
    "match": null,
