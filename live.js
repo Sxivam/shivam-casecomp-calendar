@@ -1,6 +1,6 @@
 /* Open competitions on Unstop, refreshed by scripts/update.mjs. Titles, dates and links come straight from Unstop. */
 window.LIVE = {
- "updated": "2026-11-11",
+ "updated": "2026-11-12",
  "source": "unstop.com",
  "items": [
   {
@@ -41,7 +41,7 @@ window.LIVE = {
    "title": "Mantravat - The Flagship Case Competition",
    "org": "Indian Institute of Management (IIM), Udaipur",
    "festival": "",
-   "ends": "2026-11-14T00:00:00+05:30",
+   "ends": "2026-11-14T23:59:00+05:30",
    "url": "https://unstop.com/competitions/mantravat-the-flagship-case-competition-solaris-2026--1775042",
    "region": "online",
    "match": null,
@@ -101,17 +101,6 @@ window.LIVE = {
    "region": "offline",
    "match": null,
    "track": "Ops"
-  },
-  {
-   "id": 1794745,
-   "title": "Consultimate 6.0",
-   "org": "Indian Institute of Management (IIM), Visakhapatnam",
-   "festival": "",
-   "ends": "2026-11-11T23:59:35+05:30",
-   "url": "https://unstop.com/competitions/consultimate-60--1794745",
-   "region": "online",
-   "match": null,
-   "track": "Strategy"
   },
   {
    "id": 1790448,
