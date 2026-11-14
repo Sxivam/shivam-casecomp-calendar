@@ -1,6 +1,6 @@
 /* Open competitions on Unstop, refreshed by scripts/update.mjs. Titles, dates and links come straight from Unstop. */
 window.LIVE = {
- "updated": "2026-11-13",
+ "updated": "2026-11-14",
  "source": "unstop.com",
  "items": [
   {
@@ -8,7 +8,7 @@ window.LIVE = {
    "title": "AdTract - Marketing Case Competition",
    "org": "Institute of Management Technology (IMT), Hyderabad",
    "festival": "",
-   "ends": "2026-11-13T23:59:37+05:30",
+   "ends": "2026-11-14T23:59:37+05:30",
    "url": "https://unstop.com/competitions/adtract-marketing-case-competition-impelz-120-institute-of-management-technology-imt-hyderabad-1792020",
    "region": "hybrid",
    "match": null,
@@ -41,7 +41,7 @@ window.LIVE = {
    "title": "Mantravat - The Flagship Case Competition",
    "org": "Indian Institute of Management (IIM), Udaipur",
    "festival": "",
-   "ends": "2026-11-14T23:59:00+05:30",
+   "ends": "2026-11-21T23:59:00+05:30",
    "url": "https://unstop.com/competitions/mantravat-the-flagship-case-competition-solaris-2026--1775042",
    "region": "online",
    "match": null,
