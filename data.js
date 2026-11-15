@@ -1,6 +1,6 @@
 /* The Fest Map data. Edited by hand and by the weekly updater (scripts/update.mjs). */
 window.FEST = {
- "checked": "2026-11-05",
+ "checked": "2026-11-15",
  "events": [
   {
    "n": "Shaastra",
