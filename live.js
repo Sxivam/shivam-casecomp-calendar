@@ -1,6 +1,6 @@
 /* Open competitions on Unstop, refreshed by scripts/update.mjs. Titles, dates and links come straight from Unstop. */
 window.LIVE = {
- "updated": "2026-11-16",
+ "updated": "2026-11-17",
  "source": "unstop.com",
  "items": [
   {
@@ -13,17 +13,6 @@ window.LIVE = {
    "region": "hybrid",
    "match": null,
    "track": "General"
-  },
-  {
-   "id": 1792020,
-   "title": "AdTract - Marketing Case Competition",
-   "org": "Institute of Management Technology (IMT), Hyderabad",
-   "festival": "",
-   "ends": "2026-11-16T23:59:37+05:30",
-   "url": "https://unstop.com/competitions/adtract-marketing-case-competition-impelz-120-institute-of-management-technology-imt-hyderabad-1792020",
-   "region": "hybrid",
-   "match": null,
-   "track": "Marketing"
   },
   {
    "id": 1791989,
@@ -63,7 +52,7 @@ window.LIVE = {
    "title": "Achilles' Heel- A Marketing Case Competition",
    "org": "Great Lakes Institute of Management (GLIM), Gurgaon",
    "festival": "",
-   "ends": "2026-11-16T20:00:00+05:30",
+   "ends": "2026-11-17T20:00:00+05:30",
    "url": "https://unstop.com/competitions/achilles-heel-a-marketing-case-competition-great-lakes-institute-of-management-glim-gurgaon-1797542",
    "region": "hybrid",
    "match": null,
@@ -81,17 +70,6 @@ window.LIVE = {
    "track": "Marketing"
   },
   {
-   "id": 1797270,
-   "title": "Steel Authority of India Limited (SAIL) X IIM Ranchi - National Case Competition",
-   "org": "Indian Institute of Management (IIM), Ranchi",
-   "festival": "",
-   "ends": "2026-11-20T21:00:00+05:30",
-   "url": "https://unstop.com/competitions/national-case-competition-indian-institute-of-management-iim-ranchi-1797270",
-   "region": "hybrid",
-   "match": null,
-   "track": "General"
-  },
-  {
    "id": 1779001,
    "title": "Synergy '26: Orion Case Study Competition",
    "org": "Xavier School of Management (XLRI), Jamshedpur",
@@ -103,15 +81,15 @@ window.LIVE = {
    "track": "Strategy"
   },
   {
-   "id": 1799756,
-   "title": "Off- Brand: B-Plan Competition (case Comp)",
-   "org": "Lady Shri Ram College for Women (LSR) University of Delhi (DU)",
+   "id": 1797270,
+   "title": "Steel Stride: Steel Authority of India Limited (SAIL) X IIM Ranchi - National Case Competition",
+   "org": "Indian Institute of Management (IIM), Ranchi",
    "festival": "",
-   "ends": "2026-11-17T11:59:59+05:30",
-   "url": "https://unstop.com/competitions/off-brand-b-plan-competition-case-comp-lady-shri-ram-college-for-women-lsr-du-new-delhi-1799756",
-   "region": "offline",
+   "ends": "2026-11-20T21:00:00+05:30",
+   "url": "https://unstop.com/competitions/national-case-competition-indian-institute-of-management-iim-ranchi-1797270",
+   "region": "hybrid",
    "match": null,
-   "track": "Strategy"
+   "track": "General"
   },
   {
    "id": 1792079,
@@ -180,17 +158,6 @@ window.LIVE = {
    "track": "General"
   },
   {
-   "id": 1806922,
-   "title": "Avartan Vivaad",
-   "org": "Indian Institute of Management (IIM), Mumbai",
-   "festival": "",
-   "ends": "2026-11-17T12:00:00+05:30",
-   "url": "https://unstop.com/competitions/avartan-vivaad-avartan-2026-iim-mumbai-1806922",
-   "region": "hybrid",
-   "match": null,
-   "track": "General"
-  },
-  {
    "id": 1805003,
    "title": "Veritas",
    "org": "Indian Institute of Management (IIM), Calcutta",
@@ -206,7 +173,7 @@ window.LIVE = {
    "title": "The Countermove - The Global Strategy & Consulting Challenge",
    "org": "Great Lakes Institute of Management (GLIM), Gurgaon",
    "festival": "",
-   "ends": "2026-11-16T23:59:00+05:30",
+   "ends": "2026-11-17T23:59:00+05:30",
    "url": "https://unstop.com/competitions/the-countermove-great-lakes-institute-of-management-glim-gurgaon-1799967",
    "region": "offline",
    "match": null,
