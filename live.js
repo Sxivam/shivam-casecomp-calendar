@@ -1,6 +1,6 @@
 /* Open competitions on Unstop, refreshed by scripts/update.mjs. Titles, dates and links come straight from Unstop. */
 window.LIVE = {
- "updated": "2026-11-17",
+ "updated": "2026-11-18",
  "source": "unstop.com",
  "items": [
   {
@@ -26,17 +26,6 @@ window.LIVE = {
    "track": "Ops"
   },
   {
-   "id": 1802395,
-   "title": "Reframe (Design and Marketing Case Competition)",
-   "org": "Masters Union School of Business",
-   "festival": "",
-   "ends": "2026-11-17T23:59:00+05:30",
-   "url": "https://unstop.com/competitions/reframe-design-and-marketing-case-competition-road-to-milky-way-bangalore-masters-union-school-of-business-1802395",
-   "region": "hybrid",
-   "match": null,
-   "track": "Marketing"
-  },
-  {
    "id": 1775042,
    "title": "Mantravat - The Flagship Case Competition",
    "org": "Indian Institute of Management (IIM), Udaipur",
@@ -52,7 +41,7 @@ window.LIVE = {
    "title": "Achilles' Heel- A Marketing Case Competition",
    "org": "Great Lakes Institute of Management (GLIM), Gurgaon",
    "festival": "",
-   "ends": "2026-11-17T20:00:00+05:30",
+   "ends": "2026-11-18T15:30:00+05:30",
    "url": "https://unstop.com/competitions/achilles-heel-a-marketing-case-competition-great-lakes-institute-of-management-glim-gurgaon-1797542",
    "region": "hybrid",
    "match": null,
@@ -103,17 +92,6 @@ window.LIVE = {
    "track": "Marketing"
   },
   {
-   "id": 1745667,
-   "title": "Time Turner 2026",
-   "org": "Xavier School of Management (XLRI)",
-   "festival": "",
-   "ends": "2026-11-18T02:37:43+05:30",
-   "url": "https://unstop.com/competitions/time-turner-2026-ensemble-valhalla-2026-xavier-school-of-management-xlri-1745667",
-   "region": "online",
-   "match": null,
-   "track": "General"
-  },
-  {
    "id": 1790046,
    "title": "National HR Colosseum 11.0",
    "org": "Xavier School of Management (XLRI)",
@@ -147,17 +125,6 @@ window.LIVE = {
    "track": "Finance"
   },
   {
-   "id": 1783064,
-   "title": "IMTheFuture 11.0",
-   "org": "Institute of Management Technology (IMT), Ghaziabad",
-   "festival": "",
-   "ends": "2026-11-20T23:59:53+05:30",
-   "url": "https://unstop.com/competitions/imthefuture-110-imt-ghaziabad-1783064",
-   "region": "offline",
-   "match": null,
-   "track": "General"
-  },
-  {
    "id": 1805003,
    "title": "Veritas",
    "org": "Indian Institute of Management (IIM), Calcutta",
@@ -169,11 +136,22 @@ window.LIVE = {
    "track": "General"
   },
   {
+   "id": 1783064,
+   "title": "IMTheFuture 11.0",
+   "org": "Institute of Management Technology (IMT), Ghaziabad",
+   "festival": "",
+   "ends": "2026-11-20T23:59:53+05:30",
+   "url": "https://unstop.com/competitions/imthefuture-110-imt-ghaziabad-1783064",
+   "region": "offline",
+   "match": null,
+   "track": "General"
+  },
+  {
    "id": 1799967,
    "title": "The Countermove - The Global Strategy & Consulting Challenge",
    "org": "Great Lakes Institute of Management (GLIM), Gurgaon",
    "festival": "",
-   "ends": "2026-11-17T23:59:00+05:30",
+   "ends": "2026-11-18T17:00:00+05:30",
    "url": "https://unstop.com/competitions/the-countermove-great-lakes-institute-of-management-glim-gurgaon-1799967",
    "region": "offline",
    "match": null,
