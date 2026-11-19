@@ -1,6 +1,6 @@
 /* Open competitions on Unstop, refreshed by scripts/update.mjs. Titles, dates and links come straight from Unstop. */
 window.LIVE = {
- "updated": "2026-11-18",
+ "updated": "2026-11-19",
  "source": "unstop.com",
  "items": [
   {
@@ -41,7 +41,7 @@ window.LIVE = {
    "title": "Achilles' Heel- A Marketing Case Competition",
    "org": "Great Lakes Institute of Management (GLIM), Gurgaon",
    "festival": "",
-   "ends": "2026-11-18T15:30:00+05:30",
+   "ends": "2026-11-19T18:00:00+05:30",
    "url": "https://unstop.com/competitions/achilles-heel-a-marketing-case-competition-great-lakes-institute-of-management-glim-gurgaon-1797542",
    "region": "hybrid",
    "match": null,
@@ -81,37 +81,15 @@ window.LIVE = {
    "track": "General"
   },
   {
-   "id": 1792079,
-   "title": "Avartan Bazaar - Marketing Case Challenge",
-   "org": "Indian Institute of Management (IIM), Mumbai",
-   "festival": "",
-   "ends": "2026-11-19T12:00:00+05:30",
-   "url": "https://unstop.com/competitions/avartan-marketing-case-challenge-avartan-2026-iim-mumbai-1792079",
-   "region": "offline",
-   "match": null,
-   "track": "Marketing"
-  },
-  {
    "id": 1790046,
    "title": "National HR Colosseum 11.0",
    "org": "Xavier School of Management (XLRI)",
    "festival": "",
-   "ends": "2026-11-23T23:59:00+05:30",
+   "ends": "2026-11-24T13:00:00+05:30",
    "url": "https://unstop.com/competitions/national-hr-colosseum-110-xavier-school-of-management-xlri-1790046",
    "region": "online",
    "match": null,
    "track": "HR"
-  },
-  {
-   "id": 1804850,
-   "title": "Wire Wars'26: Think Fast. Design Smart.",
-   "org": "Indian Institute of Management (IIM), Calcutta",
-   "festival": "",
-   "ends": "2026-11-18T23:58:00+05:30",
-   "url": "https://unstop.com/competitions/wire-wars26-think-fast-design-smart-iim-calcutta-1804850",
-   "region": "online",
-   "match": null,
-   "track": "General"
   },
   {
    "id": 1792046,
@@ -123,17 +101,6 @@ window.LIVE = {
    "region": "hybrid",
    "match": null,
    "track": "Finance"
-  },
-  {
-   "id": 1805003,
-   "title": "Veritas",
-   "org": "Indian Institute of Management (IIM), Calcutta",
-   "festival": "",
-   "ends": "2026-11-18T23:59:00+05:30",
-   "url": "https://unstop.com/competitions/veritas-iim-calcutta-1805003",
-   "region": "online",
-   "match": null,
-   "track": "General"
   },
   {
    "id": 1783064,
@@ -151,7 +118,7 @@ window.LIVE = {
    "title": "The Countermove - The Global Strategy & Consulting Challenge",
    "org": "Great Lakes Institute of Management (GLIM), Gurgaon",
    "festival": "",
-   "ends": "2026-11-18T17:00:00+05:30",
+   "ends": "2026-11-19T17:00:00+05:30",
    "url": "https://unstop.com/competitions/the-countermove-great-lakes-institute-of-management-glim-gurgaon-1799967",
    "region": "offline",
    "match": null,
