@@ -1,6 +1,6 @@
 /* Open competitions on Unstop, refreshed by scripts/update.mjs. Titles, dates and links come straight from Unstop. */
 window.LIVE = {
- "updated": "2026-11-19",
+ "updated": "2026-11-20",
  "source": "unstop.com",
  "items": [
   {
@@ -41,7 +41,7 @@ window.LIVE = {
    "title": "Achilles' Heel- A Marketing Case Competition",
    "org": "Great Lakes Institute of Management (GLIM), Gurgaon",
    "festival": "",
-   "ends": "2026-11-19T18:00:00+05:30",
+   "ends": "2026-11-20T22:00:00+05:30",
    "url": "https://unstop.com/competitions/achilles-heel-a-marketing-case-competition-great-lakes-institute-of-management-glim-gurgaon-1797542",
    "region": "hybrid",
    "match": null,
@@ -112,17 +112,6 @@ window.LIVE = {
    "region": "offline",
    "match": null,
    "track": "General"
-  },
-  {
-   "id": 1799967,
-   "title": "The Countermove - The Global Strategy & Consulting Challenge",
-   "org": "Great Lakes Institute of Management (GLIM), Gurgaon",
-   "festival": "",
-   "ends": "2026-11-19T17:00:00+05:30",
-   "url": "https://unstop.com/competitions/the-countermove-great-lakes-institute-of-management-glim-gurgaon-1799967",
-   "region": "offline",
-   "match": null,
-   "track": "Strategy"
   },
   {
    "id": 1806014,
