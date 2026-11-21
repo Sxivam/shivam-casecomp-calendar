@@ -1,6 +1,6 @@
 /* Open competitions on Unstop, refreshed by scripts/update.mjs. Titles, dates and links come straight from Unstop. */
 window.LIVE = {
- "updated": "2026-11-20",
+ "updated": "2026-11-21",
  "source": "unstop.com",
  "items": [
   {
@@ -37,17 +37,6 @@ window.LIVE = {
    "track": "General"
   },
   {
-   "id": 1797542,
-   "title": "Achilles' Heel- A Marketing Case Competition",
-   "org": "Great Lakes Institute of Management (GLIM), Gurgaon",
-   "festival": "",
-   "ends": "2026-11-20T22:00:00+05:30",
-   "url": "https://unstop.com/competitions/achilles-heel-a-marketing-case-competition-great-lakes-institute-of-management-glim-gurgaon-1797542",
-   "region": "hybrid",
-   "match": null,
-   "track": "Marketing"
-  },
-  {
    "id": 1784601,
    "title": "Kotler Sutra: The Marketing Case Competition",
    "org": "Indian Institute of Management (IIM), Kozhikode",
@@ -70,17 +59,6 @@ window.LIVE = {
    "track": "Strategy"
   },
   {
-   "id": 1797270,
-   "title": "Steel Stride: Steel Authority of India Limited (SAIL) X IIM Ranchi - National Case Competition",
-   "org": "Indian Institute of Management (IIM), Ranchi",
-   "festival": "",
-   "ends": "2026-11-20T21:00:00+05:30",
-   "url": "https://unstop.com/competitions/national-case-competition-indian-institute-of-management-iim-ranchi-1797270",
-   "region": "hybrid",
-   "match": null,
-   "track": "General"
-  },
-  {
    "id": 1790046,
    "title": "National HR Colosseum 11.0",
    "org": "Xavier School of Management (XLRI)",
@@ -90,28 +68,6 @@ window.LIVE = {
    "region": "online",
    "match": null,
    "track": "HR"
-  },
-  {
-   "id": 1792046,
-   "title": "Pitch Up 12.0",
-   "org": "Institute of Management Technology (IMT), Hyderabad",
-   "festival": "",
-   "ends": "2026-11-20T15:10:20+05:30",
-   "url": "https://unstop.com/competitions/pitch-up-120-impelz-120-institute-of-management-technology-imt-hyderabad-1792046",
-   "region": "hybrid",
-   "match": null,
-   "track": "Finance"
-  },
-  {
-   "id": 1783064,
-   "title": "IMTheFuture 11.0",
-   "org": "Institute of Management Technology (IMT), Ghaziabad",
-   "festival": "",
-   "ends": "2026-11-20T23:59:53+05:30",
-   "url": "https://unstop.com/competitions/imthefuture-110-imt-ghaziabad-1783064",
-   "region": "offline",
-   "match": null,
-   "track": "General"
   },
   {
    "id": 1806014,
