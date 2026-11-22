@@ -1,6 +1,6 @@
 /* Open competitions on Unstop, refreshed by scripts/update.mjs. Titles, dates and links come straight from Unstop. */
 window.LIVE = {
- "updated": "2026-11-21",
+ "updated": "2026-11-22",
  "source": "unstop.com",
  "items": [
   {
@@ -30,7 +30,7 @@ window.LIVE = {
    "title": "Mantravat - The Flagship Case Competition",
    "org": "Indian Institute of Management (IIM), Udaipur",
    "festival": "",
-   "ends": "2026-11-21T23:59:00+05:30",
+   "ends": "2026-11-22T16:59:00+05:30",
    "url": "https://unstop.com/competitions/mantravat-the-flagship-case-competition-solaris-2026--1775042",
    "region": "online",
    "match": null,
