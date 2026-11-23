@@ -1,6 +1,6 @@
 /* Open competitions on Unstop, refreshed by scripts/update.mjs. Titles, dates and links come straight from Unstop. */
 window.LIVE = {
- "updated": "2026-11-22",
+ "updated": "2026-11-23",
  "source": "unstop.com",
  "items": [
   {
@@ -11,28 +11,6 @@ window.LIVE = {
    "ends": "2026-11-24T19:00:00+05:30",
    "url": "https://unstop.com/competitions/case-competition-narsee-monjee-institute-of-management-studies-nmims-mumbai-1799353",
    "region": "hybrid",
-   "match": null,
-   "track": "General"
-  },
-  {
-   "id": 1791989,
-   "title": "Episteme - Operations Case Competition",
-   "org": "Institute of Management Technology (IMT), Hyderabad",
-   "festival": "",
-   "ends": "2026-11-22T18:29:43+05:30",
-   "url": "https://unstop.com/competitions/episteme-operations-case-competition-impelz-120-institute-of-management-technology-imt-hyderabad-1791989",
-   "region": "hybrid",
-   "match": null,
-   "track": "Ops"
-  },
-  {
-   "id": 1775042,
-   "title": "Mantravat - The Flagship Case Competition",
-   "org": "Indian Institute of Management (IIM), Udaipur",
-   "festival": "",
-   "ends": "2026-11-22T16:59:00+05:30",
-   "url": "https://unstop.com/competitions/mantravat-the-flagship-case-competition-solaris-2026--1775042",
-   "region": "online",
    "match": null,
    "track": "General"
   },
