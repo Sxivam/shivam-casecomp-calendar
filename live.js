@@ -1,6 +1,6 @@
 /* Open competitions on Unstop, refreshed by scripts/update.mjs. Titles, dates and links come straight from Unstop. */
 window.LIVE = {
- "updated": "2026-11-23",
+ "updated": "2026-11-24",
  "source": "unstop.com",
  "items": [
   {
@@ -41,7 +41,7 @@ window.LIVE = {
    "title": "National HR Colosseum 11.0",
    "org": "Xavier School of Management (XLRI)",
    "festival": "",
-   "ends": "2026-11-24T13:00:00+05:30",
+   "ends": "2026-11-24T21:00:00+05:30",
    "url": "https://unstop.com/competitions/national-hr-colosseum-110-xavier-school-of-management-xlri-1790046",
    "region": "online",
    "match": null,
