@@ -1,6 +1,6 @@
 /* The Fest Map data. Edited by hand and by the weekly updater (scripts/update.mjs). */
 window.FEST = {
- "checked": "2026-11-15",
+ "checked": "2026-11-25",
  "events": [
   {
    "n": "Shaastra",
@@ -946,7 +946,10 @@ window.FEST = {
    ],
    "star": false,
    "last": "Feb 2026",
-   "links": {},
+   "links": {
+    "site": "https://www.pragyan.org/",
+    "ig": "https://www.instagram.com/pragyan_nitt/?hl=en"
+   },
    "added": "2026-11-05",
    "isNew": true
   }

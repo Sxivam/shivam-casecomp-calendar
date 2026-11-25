@@ -2,6 +2,28 @@
 window.UPDATES = {
  "runs": [
   {
+   "date": "2026-11-25",
+   "changes": [
+    {
+     "id": "Pragyan",
+     "name": "Pragyan",
+     "field": "links.site",
+     "from": null,
+     "to": "https://www.pragyan.org/",
+     "source": "https://www.nitt.edu/home/students/events/pragyan/"
+    },
+    {
+     "id": "Pragyan",
+     "name": "Pragyan",
+     "field": "links.ig",
+     "from": null,
+     "to": "https://www.instagram.com/pragyan_nitt/?hl=en",
+     "source": "https://www.nitt.edu/home/students/events/pragyan/"
+    }
+   ],
+   "live": 24
+  },
+  {
    "date": "2026-11-15",
    "changes": [],
    "live": 24
@@ -162,5 +184,5 @@ window.UPDATES = {
    "live": 24
   }
  ],
- "last": "2026-11-15"
+ "last": "2026-11-25"
 };
