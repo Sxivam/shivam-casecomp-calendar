@@ -1,6 +1,6 @@
 /* Open competitions on Unstop, refreshed by scripts/update.mjs. Titles, dates and links come straight from Unstop. */
 window.LIVE = {
- "updated": "2026-11-26",
+ "updated": "2026-11-27",
  "source": "unstop.com",
  "items": [
   {
@@ -19,7 +19,7 @@ window.LIVE = {
    "title": "Kotler Sutra: The Marketing Case Competition",
    "org": "Indian Institute of Management (IIM), Kozhikode",
    "festival": "",
-   "ends": "2026-11-30T23:59:54+05:30",
+   "ends": "2026-12-04T23:59:54+05:30",
    "url": "https://unstop.com/competitions/kotler-sutra-the-marketing-case-competition-backwaters-2027-iim-kozhikodes-management-festival-indian-insti-1784601",
    "region": "offline",
    "match": null,
@@ -30,7 +30,7 @@ window.LIVE = {
    "title": "ProdSprint 2027 - Product-Case Competition",
    "org": "Indian Institute of Technology (IIT), Madras",
    "festival": "",
-   "ends": "2026-12-05T12:00:00+05:30",
+   "ends": "2026-12-01T12:00:00+05:30",
    "url": "https://unstop.com/competitions/prodman-2027-product-case-competition-iit-madras-1806004",
    "region": "hybrid",
    "match": null,
@@ -70,17 +70,6 @@ window.LIVE = {
    "track": "General"
   },
   {
-   "id": 1803817,
-   "title": "Cerebro 15.0: The National Case Study Competition",
-   "org": "Management Development Institute (MDI), Gurgaon",
-   "festival": "",
-   "ends": "2026-11-26T23:59:00+05:30",
-   "url": "https://unstop.com/competitions/cerebro-150-the-national-case-study-competition-delphique-2026-mdi-1803817",
-   "region": "offline",
-   "match": null,
-   "track": "General"
-  },
-  {
    "id": 1820849,
    "title": "IL Igniting Minds season 5: Business Case-Study Competition X IIM Lucknow",
    "org": "Indian Institute of Management (IIM), Lucknow",
@@ -88,17 +77,6 @@ window.LIVE = {
    "ends": "2026-11-30T22:00:27+05:30",
    "url": "https://unstop.com/competitions/il-igniting-minds-season-5-business-case-study-competition-x-iim-lucknow-manfest-varchasva-2026-27-iim-luck-1820849",
    "region": "hybrid",
-   "match": null,
-   "track": "General"
-  },
-  {
-   "id": 1804689,
-   "title": "Vincenza 13.0 - The International Business Plan Competition",
-   "org": "Management Development Institute (MDI), Gurgaon",
-   "festival": "",
-   "ends": "2026-11-26T22:00:14+05:30",
-   "url": "https://unstop.com/competitions/vincenza-130-the-international-business-plan-competition-delphique-2026-mdi-1804689",
-   "region": "offline",
    "match": null,
    "track": "General"
   },
@@ -125,28 +103,6 @@ window.LIVE = {
    "track": "Strategy"
   },
   {
-   "id": 1797422,
-   "title": "Excel at Excel",
-   "org": "Indian Institute of Management (IIM), Kozhikode",
-   "festival": "",
-   "ends": "2026-11-30T00:00:00+05:30",
-   "url": "https://unstop.com/competitions/excel-at-excel-backwaters-2027-iim-kozhikodes-management-festival-indian-institute-of-management-iim-kozhik-1797422",
-   "region": "online",
-   "match": null,
-   "track": "General"
-  },
-  {
-   "id": 1798067,
-   "title": "White Knight: The Business Strategy Challenge",
-   "org": "Indian Institute of Management (IIM), Kozhikode",
-   "festival": "",
-   "ends": "2026-11-30T23:59:00+05:30",
-   "url": "https://unstop.com/competitions/white-knight-the-business-strategy-challenge-indian-institute-of-management-iim-kozhikode-1798067",
-   "region": "offline",
-   "match": null,
-   "track": "Strategy"
-  },
-  {
    "id": 1784591,
    "title": "GameMaster Gala",
    "org": "Indian Institute of Management (IIM), Kozhikode",
@@ -156,6 +112,17 @@ window.LIVE = {
    "region": "offline",
    "match": null,
    "track": "General"
+  },
+  {
+   "id": 1798067,
+   "title": "White Knight: The Business Strategy Challenge",
+   "org": "Indian Institute of Management (IIM), Kozhikode",
+   "festival": "",
+   "ends": "2026-12-05T23:00:00+05:30",
+   "url": "https://unstop.com/competitions/white-knight-the-business-strategy-challenge-indian-institute-of-management-iim-kozhikode-1798067",
+   "region": "offline",
+   "match": null,
+   "track": "Strategy"
   },
   {
    "id": 1825251,
@@ -169,22 +136,22 @@ window.LIVE = {
    "track": "Finance"
   },
   {
-   "id": 1797414,
-   "title": "FundQuest'26: The Shark Tank Event",
-   "org": "Indian Institute of Management (IIM), Mumbai",
+   "id": 1797422,
+   "title": "Excel at Excel",
+   "org": "Indian Institute of Management (IIM), Kozhikode",
    "festival": "",
-   "ends": "2026-11-26T23:59:00+05:30",
-   "url": "https://unstop.com/competitions/fundquest26-the-shark-tank-event-iim-mumbai-1797414",
+   "ends": "2026-12-19T23:59:00+05:30",
+   "url": "https://unstop.com/competitions/excel-at-excel-backwaters-2027-iim-kozhikodes-management-festival-indian-institute-of-management-iim-kozhik-1797422",
    "region": "online",
    "match": null,
-   "track": "Finance"
+   "track": "General"
   },
   {
    "id": 1822030,
    "title": "StrategIQ: The Ultimate Business Challenge",
    "org": "Indian Institute of Management (IIM), Raipur",
    "festival": "",
-   "ends": "2026-11-26T23:59:26+05:30",
+   "ends": "2026-11-27T23:59:26+05:30",
    "url": "https://unstop.com/competitions/strategiciq-the-ultimate-business-challenge--1822030",
    "region": "online",
    "match": null,
