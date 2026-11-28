@@ -1,6 +1,6 @@
 /* Open competitions on Unstop, refreshed by scripts/update.mjs. Titles, dates and links come straight from Unstop. */
 window.LIVE = {
- "updated": "2026-11-27",
+ "updated": "2026-11-28",
  "source": "unstop.com",
  "items": [
   {
@@ -15,17 +15,6 @@ window.LIVE = {
    "track": "Marketing"
   },
   {
-   "id": 1784601,
-   "title": "Kotler Sutra: The Marketing Case Competition",
-   "org": "Indian Institute of Management (IIM), Kozhikode",
-   "festival": "",
-   "ends": "2026-12-04T23:59:54+05:30",
-   "url": "https://unstop.com/competitions/kotler-sutra-the-marketing-case-competition-backwaters-2027-iim-kozhikodes-management-festival-indian-insti-1784601",
-   "region": "offline",
-   "match": null,
-   "track": "Marketing"
-  },
-  {
    "id": 1806004,
    "title": "ProdSprint 2027 - Product-Case Competition",
    "org": "Indian Institute of Technology (IIT), Madras",
@@ -35,6 +24,17 @@ window.LIVE = {
    "region": "hybrid",
    "match": null,
    "track": "Product"
+  },
+  {
+   "id": 1784601,
+   "title": "Kotler Sutra: The Marketing Case Competition",
+   "org": "Indian Institute of Management (IIM), Kozhikode",
+   "festival": "",
+   "ends": "2026-12-04T23:59:54+05:30",
+   "url": "https://unstop.com/competitions/kotler-sutra-the-marketing-case-competition-backwaters-2027-iim-kozhikodes-management-festival-indian-insti-1784601",
+   "region": "offline",
+   "match": null,
+   "track": "Marketing"
   },
   {
    "id": 1806018,
@@ -145,17 +145,6 @@ window.LIVE = {
    "region": "online",
    "match": null,
    "track": "General"
-  },
-  {
-   "id": 1822030,
-   "title": "StrategIQ: The Ultimate Business Challenge",
-   "org": "Indian Institute of Management (IIM), Raipur",
-   "festival": "",
-   "ends": "2026-11-27T23:59:26+05:30",
-   "url": "https://unstop.com/competitions/strategiciq-the-ultimate-business-challenge--1822030",
-   "region": "online",
-   "match": null,
-   "track": "Strategy"
   },
   {
    "id": 1806030,
